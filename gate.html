@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gate — Winding-Class Holonomic Gates · Admissible Technologies</title>
+<meta name="description" content="A quantum gate set by an integer winding number, not by your pulse amplitude — control-amplitude error cancels by construction.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="emblem" viewBox="1.8 11.3 64.7 65">
+    <polyline class="e" points="11.29 25.54 11.29 20.98 24.66 20.98 28.19 17.45"/><polyline class="e" points="5.08 47.05 1.83 43.8 11.29 34.35 11.29 29.36"/><polyline class="e" points="16.03 66.63 11.29 66.63 11.29 53.26 7.79 49.76"/><polyline class="e" points="37.43 72.76 34.11 76.08 24.66 66.63 19.78 66.63"/><polyline class="e" points="56.93 62.16 56.93 66.63 43.56 66.63 40.15 70.04"/><polyline class="e" points="63.09 40.51 66.39 43.8 56.93 53.26 56.93 58.09"/><polyline class="e" points="52.32 20.98 56.93 20.98 56.93 34.35 60.39 37.8"/><polyline class="e" points="30.88 14.75 34.11 11.53 43.56 20.98 48.51 20.98"/><line class="e" x1="38.03" y1="34.35" x2="26.98" y2="23.3"/><line class="e" x1="56.93" y1="53.26" x2="47.48" y2="43.81"/><line class="e" x1="30.19" y1="53.26" x2="41.33" y2="64.39"/><line class="e" x1="11.29" y1="34.35" x2="20.74" y2="43.8"/><line class="e" x1="34.11" y1="57.18" x2="24.66" y2="66.63"/><line class="e" x1="54.62" y1="36.67" x2="43.56" y2="47.72"/><line class="e" x1="24.66" y1="39.89" x2="13.6" y2="50.94"/><line class="e" x1="43.56" y1="20.98" x2="34.11" y2="30.43"/><line class="e" x1="30.19" y1="34.35" x2="14.45" y2="34.35"/><line class="e" x1="56.93" y1="34.35" x2="43.56" y2="34.35"/><line class="e" x1="24.66" y1="53.26" x2="11.29" y2="53.26"/><line class="e" x1="53.77" y1="53.26" x2="38.03" y2="53.26"/><line class="e" x1="43.56" y1="53.26" x2="43.56" y2="66.63"/><line class="e" x1="43.56" y1="24.14" x2="43.56" y2="39.89"/><line class="e" x1="24.66" y1="47.72" x2="24.66" y2="63.35"/><line class="e" x1="24.66" y1="20.98" x2="24.66" y2="34.35"/><line class="e" x1="54.62" y1="50.94" x2="56.31" y2="50.94"/><line class="e" x1="26.98" y1="50.94" x2="37.07" y2="50.94"/><line class="e" x1="11.89" y1="50.94" x2="24.66" y2="50.94"/><line class="e" x1="43.56" y1="36.67" x2="56.35" y2="36.67"/><line class="e" x1="16.77" y1="36.67" x2="27.88" y2="36.67"/><line class="e" x1="26.98" y1="34.35" x2="26.98" y2="21.66"/><line class="e" x1="26.98" y1="61.03" x2="26.98" y2="50.05"/><path class="e" d="M15.84,21a29.1,29.1,0,0,1,18.24-6.4h.15"/><path class="e" d="M5.07,40.56a29.09,29.09,0,0,1,8.35-17.4"/><path class="e" d="M11.29,62A29,29,0,0,1,4.9,43.77"/><path class="e" d="M30.79,72.77a29.11,29.11,0,0,1-17.34-8.36"/><path class="e" d="M52.22,66.63A29,29,0,0,1,34.08,73"/><path class="e" d="M63.08,47.11a29.12,29.12,0,0,1-8.54,17.47"/><path class="e" d="M56.93,25.61a29,29,0,0,1,6.33,17.6c0,.18,0,.37,0,.56"/><path class="e" d="M37.34,14.76a29.13,29.13,0,0,1,17.49,8.48"/><path class="d" fill="currentColor" stroke="none" d="M32.87,43.77A1.22,1.22,0,1,1,34.08,45,1.21,1.21,0,0,1,32.87,43.77Z"/>
+  </symbol>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg><use href="#emblem"/></svg>Admissible Technologies</a>
+    <a class="back" href="index.html#portfolio">&larr; Back to the stack</a>
+    <a class="cta" href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="phero">
+  <div class="wrap narrow">
+    <div class="layerline">The gate · topological protection<span class="at">AT-001</span></div>
+    <h1>A gate set by geometry, not by your pulse.</h1>
+    <div class="tagline">Winding-class holonomic gates</div>
+    <p class="intro">Every quantum gate is an instruction the control electronics deliver imperfectly — and in a normal gate, an imperfect pulse is a coherent mistake the qubit faithfully executes. The winding-class gate breaks that link: the operation is fixed by an integer, so amplitude error largely cancels by construction.</p>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap">
+    <div class="feature">
+      <div>
+        <h3>The problem: gates inherit every control error.</h3>
+        <p>In a conventional gate, the rotation angle is proportional to the drive amplitude and duration. Get the pulse 1% wrong and the gate is 1% wrong — a coherent error that accumulates across a circuit faster than decoherence does. You can calibrate it away, but only momentarily, and only per device.</p>
+      </div>
+      <div class="graphic">
+        <svg class="gfx" viewBox="0 0 200 132" role="img" aria-label="Holonomic dark-state level diagram: three ground states drive to one excited state, with a zero-energy dark subspace">
+          <line x1="82" y1="30" x2="118" y2="30" stroke="#f4e9cd" stroke-width="3"/>
+          <text x="124" y="33" font-size="7" fill="#f4e9cd">|e&rang;</text>
+          <rect x="70" y="10" width="60" height="13" rx="3" fill="rgba(250,163,7,0.14)" stroke="rgba(250,163,7,0.5)"/>
+          <text x="100" y="19" text-anchor="middle" font-size="6.5" fill="#faa307">|B&plusmn;&rang; bright</text>
+          <line x1="47" y1="112" x2="92" y2="33" stroke="#d00000" stroke-width="2"/><path d="M92 33 l-5 1.5 l2 4.5 z" fill="#d00000"/>
+          <line x1="100" y1="112" x2="100" y2="34" stroke="#e85d04" stroke-width="2"/><path d="M100 33 l-2.6 5 h5.2 z" fill="#e85d04"/>
+          <line x1="153" y1="112" x2="108" y2="33" stroke="#7fd4c8" stroke-width="2"/><path d="M108 33 l3 3.6 l3.2-3 z" fill="#7fd4c8"/>
+          <rect x="64" y="84" width="72" height="14" rx="4" fill="rgba(244,233,205,0.1)" stroke="rgba(244,233,205,0.4)"/>
+          <text x="100" y="93.5" text-anchor="middle" font-size="6.5" fill="#f4e9cd">|D&#8321;&rang;, |D&#8322;&rang;  &middot;  dark, E = 0</text>
+          <line x1="30" y1="113" x2="64" y2="113" stroke="#f4e9cd" stroke-width="3"/><text x="47" y="124" text-anchor="middle" font-size="6.5" fill="#cfc6ad">|0&rang;</text>
+          <line x1="83" y1="113" x2="117" y2="113" stroke="#f4e9cd" stroke-width="3"/><text x="100" y="124" text-anchor="middle" font-size="6.5" fill="#cfc6ad">|1&rang;</text>
+          <line x1="136" y1="113" x2="170" y2="113" stroke="#f4e9cd" stroke-width="3"/><text x="153" y="124" text-anchor="middle" font-size="6.5" fill="#cfc6ad">|a&rang;</text>
+          <line x1="184" y1="31" x2="184" y2="112" stroke="rgba(244,233,205,0.3)" stroke-width="1"/>
+          <text x="190" y="74" font-size="6" fill="rgba(244,233,205,0.5)" transform="rotate(90 190 74)">&Delta;gap</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="feature rev">
+      <div>
+        <h3>How it works: a loop in a dark subspace.</h3>
+        <p>The logical qubit lives in a two-state <b>dark subspace</b> — a pair of zero-energy states decoupled from the lossy excited level. Sweeping flux through the circuit's loops steers that subspace around a closed path, and the resulting non-Abelian (Wilczek&ndash;Zee) holonomy depends only on the <b>integer winding number</b> of the path. The gate angle is geometry, not amplitude — and the connection that generates it is constant by gauge invariance, which is why a single Josephson junction per loop is load-bearing.</p>
+      </div>
+      <div class="graphic">
+        <svg class="gfx" viewBox="0 0 200 150" role="img" aria-label="A closed flux loop traced once (winding number one) yields a fixed gate angle">
+          <circle cx="100" cy="72" r="48" fill="none" stroke="rgba(244,233,205,0.18)" stroke-width="1" stroke-dasharray="3 4"/>
+          <circle cx="100" cy="72" r="48" fill="none" stroke="#e85d04" stroke-width="2.4" stroke-dasharray="250 50" transform="rotate(-90 100 72)"/>
+          <path d="M148 66 l4 6 l-7 2 z" fill="#e85d04"/>
+          <circle cx="100" cy="72" r="13" fill="rgba(232,93,4,0.12)" stroke="#faa307" stroke-width="1.6"/>
+          <text x="100" y="70" text-anchor="middle" font-size="7" font-weight="700" fill="#f4e9cd">dark</text>
+          <text x="100" y="79" text-anchor="middle" font-size="7" font-weight="700" fill="#f4e9cd">qubit</text>
+          <text x="100" y="138" text-anchor="middle" font-size="8" fill="#faa307">winding &nu; = 1  &rarr;  &theta; = 2&pi;&nu;&lambda;</text>
+          <text x="100" y="20" text-anchor="middle" font-size="7.5" fill="var(--cream-dim)" fill-opacity="0.7">flux swept once around the loop</text>
+        </svg>
+      </div>
+    </div>
+    <ul class="specs">
+      <li><b>Gate angle = integer winding &times; a fixed constant</b> <span>&mdash; first-order immune to control-amplitude error; verified two independent ways to 0.1%.</span></li>
+      <li><b>Universal.</b> <span>A three-handle device gives two independent generators, so finite winding sequences are dense in SU(2) (Solovay&ndash;Kitaev compile).</span></li>
+      <li><b>Gap-protected.</b> <span>A dark&ndash;bright gap above ~420&nbsp;MHz keeps thermal and TLS processes from spoiling the protection.</span></li>
+      <li><b>A different axis than raw fidelity.</b> <span>The win is robustness and array-size independence, not beating the best demonstrated single-gate number.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <div class="eyebrow"><span class="bar"></span>The science</div>
+    <h2 class="sec">Proven on paper, validated in simulation.</h2>
+    <p class="lede">The construction, the gauge-invariance proof, and the density-in-SU(2) universality result are worked out analytically and confirmed by multi-mode numerics. It is a design we are looking to prove on a partner's hardware &mdash; not yet a fabricated device.</p>
+    <div class="papercite">
+      <span class="k">Reference</span>
+      E. S. Brooke, <i>"Universal Holonomic Quantum Gates via Winding-Class-Indexed Dark-State Connections in Multi-Loop Superconducting Circuits"</i> (2026). Gate = exp(i&middot;2&pi;&nu;&middot;A<sub>&phi;</sub>), set by the integer winding number &nu;.
+    </div>
+    <div class="statusbar">
+      <span class="chip"><b>Patent-pending</b> &middot; provisional filed</span>
+      <span class="chip">Analytically + numerically validated</span>
+      <span class="chip">Not yet silicon-proven</span>
+    </div>
+  </div>
+</section>
+
+<section class="band contact">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center;"><span class="bar"></span>Work with us</div>
+    <h2>Want robust gates on your process?</h2>
+    <div class="turn">Bring the winding-class gate into your stack &mdash; prove it, then license it.</div>
+    <a class="mail" href="mailto:ethan@admissibletech.com">ethan@admissibletech.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg><use href="#emblem"/></svg>Admissible Technologies, Inc.</a>
+    <div class="crossnav">
+      <a href="qubit.html">Next: the qubit &rarr;</a>
+      <a href="index.html#portfolio">All five branches</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
