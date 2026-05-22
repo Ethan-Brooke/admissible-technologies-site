@@ -31,7 +31,7 @@
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="#top"><svg><use href="#emblem"/></svg>Admissible Technologies</a>
+    <a class="brand" href="#top"><img src="logo.svg" alt="Admissible Technologies" class="navlogo"></a>
     <div class="links">
       <a href="#principle">The principle</a>
       <a href="#portfolio">The stack</a>
@@ -80,15 +80,17 @@
 <section class="band" id="principle">
   <div class="wrap">
     <div class="eyebrow"><span class="bar"></span>The principle</div>
-    <h2 class="sec">A quantum state is a set of distinctions held against a world that keeps erasing them.</h2>
-    <p class="lede">Holding each distinction draws on a finite capacity budget, and distinctions packed close together compete for it. Seen this way, every failure mode in a quantum processor — decoherence, crosstalk, a logical error, an unverifiable result — is the same budget being overspent in a different place. That gives the machine a clean defense, layer by layer — and our portfolio is built one patent per layer.</p>
+    <h2 class="sec">A quantum state is a distinction held open.</h2>
+    <p class="lede">Keeping it open costs capacity. Pack too many distinctions too close together, and they begin to compete for the same finite budget. In a quantum processor, the familiar failures &mdash; decoherence, crosstalk, logical error, unverifiable output &mdash; are not separate kinds of breakdown. They are the same overspend appearing at different layers of the machine. That gives the defense a natural architecture: protect the distinction where it is held, where it is coupled, where it is corrected, and where it is certified. Our portfolio follows that architecture &mdash; one patent per layer.</p>
     <div class="chain">
-      <div class="step"><div class="n">Layer 1</div><h4>Make the gate free</h4><p>Encode the operation in topology, so it costs nothing to hold against control error.</p></div>
-      <div class="step"><div class="n">Layer 2</div><h4>Raise the floor</h4><p>Keep a protective energy gap above the logical states — the minimum each distinction must pay.</p></div>
-      <div class="step"><div class="n">Layer 3</div><h4>Isolate the budget</h4><p>Confine each qubit's control field so neighbors don't draw down one another's capacity.</p></div>
-      <div class="step"><div class="n">Layer 4</div><h4>Manage the spend</h4><p>When noise loads the budget, redistribute and correct before a failure can span the array.</p></div>
+      <div class="step"><div class="n">Layer 1</div><h4>Make the gate free</h4><p>Encode the operation in topology, so the computation does not have to be continually held open against control error.</p></div>
+      <div class="step"><div class="n">Layer 2</div><h4>Raise the floor</h4><p>Maintain a protective energy gap above the logical states, setting the minimum cost required to erase the distinction.</p></div>
+      <div class="step"><div class="n">Layer 3</div><h4>Isolate the budget</h4><p>Confine each qubit's control field, so neighboring qubits do not draw down one another's capacity.</p></div>
+      <div class="step"><div class="n">Layer 4</div><h4>Manage the spend</h4><p>When noise loads the budget, redistribute and correct it before any failure can span the array.</p></div>
     </div>
+    <p class="lede">Together, the layers turn quantum protection into a capacity architecture: reduce the cost of the operation, raise the cost of erasure, isolate competing demands, and correct overspend before it becomes system-level failure.</p>
     <p class="src">Grounded in the company's technical papers — <i>"Quantum Computing as Enforcement Engineering,"</i> the <i>winding-class holonomic-gate</i> and <i>"Magnetically Dark Winding-Class Quantum Processors"</i> analyses, and <i>"Fault Tolerance as Admissibility Saturation"</i> — and validated in field solvers and simulation.</p>
+    <a class="idea-explore" href="the-idea.html"><span>Explore the idea &mdash; the science, and why no one had put it together</span><span class="arrow">&rarr;</span></a>
   </div>
 </section>
 
@@ -99,10 +101,10 @@
     <div class="cards">
 
       <div class="pcard">
-        <span class="layer">The gate · topological protection</span><span class="at">AT-001</span>
-        <h3>Set by geometry.</h3>
+        <span class="layer">The gate · winding-class control</span><span class="at">AT-001</span>
+        <h3>A gate set by geometry, not by the pulse.</h3>
         <div class="tag">Winding-class holonomic gates</div>
-        <p>The gate angle is fixed by an integer winding number, not by your pulse amplitude — so control-amplitude error largely cancels by construction.</p>
+        <p>AT-001 is a superconducting circuit architecture for more stable control of a qubit's |0&rang;/|1&rang; superposition. The operation is fixed by an integer winding path through the circuit, so the gate is less vulnerable to small pulse-amplitude errors.</p>
         <div class="status">Patent-pending · analytically + numerically validated</div>
         <a class="explore" href="gate.html"><span>Explore the gate</span><span class="arrow">&rarr;</span></a>
       </div>
@@ -111,16 +113,16 @@
         <span class="layer">The qubit · budget isolation</span><span class="at">AT-002</span>
         <h3>Confine the field. Go dark.</h3>
         <div class="tag">Magnetically-dark qubit + confined flux-bias</div>
-        <p>A coaxial solenoid keeps the bias field inside (&ge;300&times; lower crosstalk) and a gradiometric layout cancels uniform-field response — so a qubit barely sees its neighbors.</p>
+        <p>Keep the control budget local. A coaxial solenoid traps the bias field inside, cutting crosstalk by &ge;300&times;, while a gradiometric layout cancels uniform-field response &mdash; so one qubit barely spends another's capacity.</p>
         <div class="status">Patent-pending · EM-validated (FastHenry + OpenEMS)</div>
         <a class="explore" href="qubit.html"><span>Explore the qubit</span><span class="arrow">&rarr;</span></a>
       </div>
 
       <div class="pcard">
-        <span class="layer">Error correction · threshold protection</span><span class="at">AT-003</span>
-        <h3>Predict failure before it spans.</h3>
+        <span class="layer">Error correction · QEC runtime</span><span class="at">AT-003</span>
+        <h3>Manage the spend before it spans.</h3>
         <div class="tag">Saturation-aware adaptive QEC runtime</div>
-        <p>Read each interface's budget headroom — the saturation map, not the raw error rate — to forecast logical failure and steer correction where it's needed.</p>
+        <p>Read each interface's remaining headroom &mdash; the saturation map, not just the raw error rate. When noise loads one part of the array, the runtime redirects correction before a local overspend becomes a logical failure.</p>
         <div class="status">Patent-pending · reduction-to-practice in simulation</div>
         <a class="explore" href="error-correction.html"><span>Explore error correction</span><span class="arrow">&rarr;</span></a>
       </div>
@@ -129,38 +131,41 @@
         <span class="layer">Trust · measure &amp; certify</span><span class="at">AT-005</span>
         <h3>Measure the budget. Certify what's real.</h3>
         <div class="tag">Characterization, monitoring &amp; certification engine</div>
-        <p>Vendor-agnostic software that profiles hardware on a cost-distortion frontier, runs anytime-valid drift monitoring, and audits whether a workload is genuinely hard for a classical machine.</p>
+        <p>A vendor-agnostic software layer that profiles hardware on a cost-distortion frontier, monitors drift with anytime-valid statistics, and audits whether a workload is genuinely beyond classical reach &mdash; so a result is not just produced, but certified.</p>
         <div class="status">Patent-pending · MVP running on public hardware data</div>
         <a class="explore" href="trust.html"><span>Explore the trust layer</span><span class="arrow">&rarr;</span></a>
       </div>
 
       <div class="pcard">
         <span class="layer">The vacuum · the frontier</span><span class="at">AT-004</span>
-        <h3>Engineer the vacuum itself.</h3>
+        <h3>Engineer the boundary beneath the state.</h3>
         <div class="tag">Topological / fermionic dynamical-Casimir device</div>
-        <p>An exploratory device for controlling vacuum-energy boundaries and generating entangled pairs — the deepest layer of the same idea.</p>
+        <p>An exploratory device for shaping vacuum-energy boundary conditions and generating entangled pairs &mdash; extending the same capacity logic below the qubit, to the frontier where distinctions first become available.</p>
         <div class="status">Patent-pending · early-stage / exploratory</div>
         <a class="explore" href="vacuum.html"><span>Explore the vacuum</span><span class="arrow">&rarr;</span></a>
       </div>
 
     </div>
+    <a class="idea-explore" href="the-stack.html"><span>See the whole portfolio &mdash; the protection stack, layer by layer</span><span class="arrow">&rarr;</span></a>
   </div>
 </section>
 
 <section class="band" id="work">
   <div class="wrap">
     <div class="eyebrow"><span class="bar"></span>Work with us</div>
-    <h2 class="sec">Two ways in — software now, design partnership next.</h2>
+    <h2 class="sec">Two ways in: measure the machine you have, then improve the machine you build.</h2>
     <div class="engines">
       <div class="engine">
         <div class="k">Software · recurring</div>
         <h3>Observability &rarr; Certification</h3>
         <p>Measure and certify quantum hardware from the data it already produces. Live health and drift monitoring today; the neutral certification layer as the dataset and track record compound. Vendor-agnostic, recurring, and the fastest way to start.</p>
+        <a class="idea-explore" href="work.html#observability"><span>Start with your data</span><span class="arrow">&rarr;</span></a>
       </div>
       <div class="engine">
         <div class="k">Hardware · design partnership</div>
         <h3>Design partner &rarr; license</h3>
         <p>Bring the magnetically-dark qubit, confined flux-bias, and holonomic-gate designs into your process, prove the coherence and crosstalk gains on your hardware, then license the IP blocks — the "ARM of quantum gates" model.</p>
+        <a class="idea-explore" href="work.html#design-partner"><span>Start a design partnership</span><span class="arrow">&rarr;</span></a>
       </div>
     </div>
   </div>
@@ -178,7 +183,7 @@
 <footer>
   <div class="wrap">
     <a class="brand" href="#top"><svg><use href="#emblem"/></svg>Admissible Technologies, Inc.</a>
-    <p class="fineprint">Patents pending across five families. Performance figures are theoretical and validated in simulation / field solvers; not yet silicon-proven. © 2026 Admissible Technologies, Inc.</p>
+    <p class="fineprint">Patents pending across five families. Performance figures are theoretical and validated in field solvers and simulation &mdash; not yet silicon-proven.</p>
   </div>
 </footer>
 

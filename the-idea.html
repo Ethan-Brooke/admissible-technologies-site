@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Idea — One Budget, Five Defenses · Admissible Technologies</title>
+<meta name="description" content="A quantum state is a set of distinctions held against a world that keeps erasing them. Holding each one costs a finite budget — and every hardware failure is that budget overspent. Here is the science, and why it was hiding in plain sight.">
+<link rel="canonical" href="https://admissibletech.com/the-idea.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0a0a0c">
+<meta property="og:site_name" content="Admissible Technologies">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://admissibletech.com/the-idea.html">
+<meta property="og:title" content="The Idea — One Budget, Five Defenses">
+<meta property="og:description" content="Every hard problem in quantum hardware is the same finite budget overspent in a different place. The science, and why no one had put it together.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Idea — One Budget, Five Defenses">
+<meta name="twitter:description" content="Every hard problem in quantum hardware is the same finite budget overspent in a different place.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="emblem" viewBox="1.8 11.3 64.7 65">
+    <polyline class="e" points="11.29 25.54 11.29 20.98 24.66 20.98 28.19 17.45"/><polyline class="e" points="5.08 47.05 1.83 43.8 11.29 34.35 11.29 29.36"/><polyline class="e" points="16.03 66.63 11.29 66.63 11.29 53.26 7.79 49.76"/><polyline class="e" points="37.43 72.76 34.11 76.08 24.66 66.63 19.78 66.63"/><polyline class="e" points="56.93 62.16 56.93 66.63 43.56 66.63 40.15 70.04"/><polyline class="e" points="63.09 40.51 66.39 43.8 56.93 53.26 56.93 58.09"/><polyline class="e" points="52.32 20.98 56.93 20.98 56.93 34.35 60.39 37.8"/><polyline class="e" points="30.88 14.75 34.11 11.53 43.56 20.98 48.51 20.98"/><line class="e" x1="38.03" y1="34.35" x2="26.98" y2="23.3"/><line class="e" x1="56.93" y1="53.26" x2="47.48" y2="43.81"/><line class="e" x1="30.19" y1="53.26" x2="41.33" y2="64.39"/><line class="e" x1="11.29" y1="34.35" x2="20.74" y2="43.8"/><line class="e" x1="34.11" y1="57.18" x2="24.66" y2="66.63"/><line class="e" x1="54.62" y1="36.67" x2="43.56" y2="47.72"/><line class="e" x1="24.66" y1="39.89" x2="13.6" y2="50.94"/><line class="e" x1="43.56" y1="20.98" x2="34.11" y2="30.43"/><line class="e" x1="30.19" y1="34.35" x2="14.45" y2="34.35"/><line class="e" x1="56.93" y1="34.35" x2="43.56" y2="34.35"/><line class="e" x1="24.66" y1="53.26" x2="11.29" y2="53.26"/><line class="e" x1="53.77" y1="53.26" x2="38.03" y2="53.26"/><line class="e" x1="43.56" y1="53.26" x2="43.56" y2="66.63"/><line class="e" x1="43.56" y1="24.14" x2="43.56" y2="39.89"/><line class="e" x1="24.66" y1="47.72" x2="24.66" y2="63.35"/><line class="e" x1="24.66" y1="20.98" x2="24.66" y2="34.35"/><line class="e" x1="54.62" y1="50.94" x2="56.31" y2="50.94"/><line class="e" x1="26.98" y1="50.94" x2="37.07" y2="50.94"/><line class="e" x1="11.89" y1="50.94" x2="24.66" y2="50.94"/><line class="e" x1="43.56" y1="36.67" x2="56.35" y2="36.67"/><line class="e" x1="16.77" y1="36.67" x2="27.88" y2="36.67"/><line class="e" x1="26.98" y1="34.35" x2="26.98" y2="21.66"/><line class="e" x1="26.98" y1="61.03" x2="26.98" y2="50.05"/><path class="e" d="M15.84,21a29.1,29.1,0,0,1,18.24-6.4h.15"/><path class="e" d="M5.07,40.56a29.09,29.09,0,0,1,8.35-17.4"/><path class="e" d="M11.29,62A29,29,0,0,1,4.9,43.77"/><path class="e" d="M30.79,72.77a29.11,29.11,0,0,1-17.34-8.36"/><path class="e" d="M52.22,66.63A29,29,0,0,1,34.08,73"/><path class="e" d="M63.08,47.11a29.12,29.12,0,0,1-8.54,17.47"/><path class="e" d="M56.93,25.61a29,29,0,0,1,6.33,17.6c0,.18,0,.37,0,.56"/><path class="e" d="M37.34,14.76a29.13,29.13,0,0,1,17.49,8.48"/><path class="d" fill="currentColor" stroke="none" d="M32.87,43.77A1.22,1.22,0,1,1,34.08,45,1.21,1.21,0,0,1,32.87,43.77Z"/>
+  </symbol>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="Admissible Technologies" class="navlogo"></a>
+    <a class="back" href="index.html#principle">&larr; Back to the principle</a>
+    <a class="cta" href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="phero">
+  <div class="wrap narrow">
+    <div class="layerline">The idea &middot; first principles</div>
+    <h1>The whole machine runs on one budget.</h1>
+    <div class="tagline">Why five hard problems are one problem.</div>
+    <p class="intro">A quantum state is a set of distinctions &mdash; this and not that &mdash; held against a world that keeps trying to erase them. Holding each one costs something real, the supply is finite, and distinctions crowded together compete for it. Read the machine that way and its hardest problems stop looking separate. Decoherence, crosstalk, the error-correction wall, the trust gap &mdash; each is the same budget overspent in a different place.</p>
+  </div>
+</header>
+
+<!-- ============ INVESTOR / CURIOUS TIER ============ -->
+
+<section class="band">
+  <div class="wrap">
+    <div class="feature">
+      <div>
+        <h3>What the budget is.</h3>
+        <p>Every piece of quantum information is a distinction the hardware has to keep straight: a phase that has to stay <i>this</i> and not <i>that</i>, long enough to compute with. Maintaining that distinction has a real, ongoing cost &mdash; preventing premature collapse takes continuous work, and information is physical in the most literal sense: erasing it costs energy, measured, not assumed. Any finite region of the world can only hold so many distinctions at once before they blur into one another. That ceiling is the budget. A processor is an exercise in spending it well.</p>
+        <p>Picture a sheet of paper that holds only so much writing before the lines start to smear. Add more, press them closer, and the page stops being legible &mdash; not because any single mark is wrong, but because the page ran out of room. A qubit fails the same way, and for the same reason.</p>
+      </div>
+      <div class="graphic">
+        <svg class="gfx" viewBox="0 0 230 150" role="img" aria-label="A finite capacity budget shown as a bar: held distinctions fill it toward a fixed ceiling, and crowding past the ceiling produces errors">
+          <defs>
+            <linearGradient id="warm" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#6a040f"/><stop offset="0.5" stop-color="#d00000"/><stop offset="1" stop-color="#e85d04"/>
+            </linearGradient>
+          </defs>
+          <text x="20" y="26" font-size="8" fill="#cfc6ad" letter-spacing="0.5">held distinctions</text>
+          <g fill="rgba(250,163,7,0.85)">
+            <rect x="20" y="34" width="11" height="11" rx="2"/><rect x="34" y="34" width="11" height="11" rx="2"/>
+            <rect x="48" y="34" width="11" height="11" rx="2"/><rect x="62" y="34" width="11" height="11" rx="2"/>
+            <rect x="76" y="34" width="11" height="11" rx="2"/><rect x="90" y="34" width="11" height="11" rx="2"/>
+            <rect x="104" y="34" width="11" height="11" rx="2"/><rect x="118" y="34" width="11" height="11" rx="2"/>
+          </g>
+          <rect x="20" y="74" width="190" height="26" rx="7" fill="rgba(244,233,205,0.07)" stroke="rgba(244,233,205,0.22)"/>
+          <rect x="20" y="74" width="150" height="26" rx="7" fill="url(#warm)"/>
+          <rect x="170" y="74" width="40" height="26" rx="7" fill="rgba(208,0,0,0.16)" stroke="rgba(208,0,0,0.45)"/>
+          <line x1="170" y1="66" x2="170" y2="108" stroke="#faa307" stroke-width="2" stroke-dasharray="3 3"/>
+          <text x="170" y="120" text-anchor="middle" font-size="7.5" fill="#faa307">capacity ceiling C</text>
+          <text x="95" y="91" text-anchor="middle" font-size="8" font-weight="700" fill="#180a00">budget spent</text>
+          <text x="190" y="139" text-anchor="middle" font-size="7.5" fill="#d77">overspend</text>
+          <text x="190" y="148" text-anchor="middle" font-size="7.5" fill="#d77">= errors</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>One cause, five places</div>
+    <h2 class="sec">Every failure is the same overspend.</h2>
+    <p class="lede">Pull on any of the field's hard problems and the same thread comes out: a budget being spent faster than it can be held. So the defense is not five unrelated fixes. It is one budget, protected five times &mdash; and we hold a patent at each layer.</p>
+    <ul class="specs">
+      <li><b>The gate.</b> <span>A control pulse that misses by a percent is a distinction paid for and not delivered. Fix the operation to geometry so it costs nothing to hold against control error. <i>(AT-001)</i></span></li>
+      <li><b>The qubit.</b> <span>Two neighbors that can feel each other are drawing on one shared supply. Confine each control field so qubits stop spending one another's budget. <i>(AT-002)</i></span></li>
+      <li><b>Error correction.</b> <span>A logical error is the budget overspent in one spot, then spreading. Read the headroom &mdash; not the raw error rate &mdash; and steer correction before the failure can span the array. <i>(AT-003)</i></span></li>
+      <li><b>Trust.</b> <span>An unverifiable result is a budget no one measured. Profile the spend, monitor the drift, and certify whether a workload is genuinely hard for a classical machine. <i>(AT-005)</i></span></li>
+      <li><b>The vacuum.</b> <span>The deepest layer of the same idea: engineer the vacuum boundary itself. Exploratory, and the frontier of the program. <i>(AT-004)</i></span></li>
+    </ul>
+    <p class="src">Each layer has its own page in <a href="the-stack.html" style="color:var(--amber);">the stack</a>.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <div class="eyebrow"><span class="bar"></span>The part that surprises people</div>
+    <h2 class="sec">Why it was hiding in plain sight.</h2>
+    <p class="lede">None of the ingredients are new. Information has been known to be physical since 1961. The bound on how much distinguishable structure fits in a region is decades old. Error correction has had thresholds for thirty years. So why hadn't the machine been read as one budget before? Three reasons, none of them mysterious.</p>
+    <p class="lede"><b>First, the failure modes live in different departments.</b> Decoherence belongs to physics. Crosstalk belongs to microwave engineering. The threshold belongs to coding theory. Trust belongs to metrology. Four fields, four vocabularies, four sets of fixes &mdash; and no shared currency in which anyone could notice they were the same overspend.</p>
+    <p class="lede"><b>Second, the reflex is to add, not to budget.</b> When a quantum machine struggles, the instinct is more &mdash; more qubits, more redundancy, better materials. Treating capacity as finite and allocatable, as a thing whose spending you design, cuts against the habit of solving scarcity by buying more of it.</p>
+    <p class="lede"><b>Third, the lens came from a different building.</b> Seeing one budget took starting from another question entirely &mdash; what does a finite world actually permit? &mdash; and only then looking down at a processor. The people best placed to fix quantum hardware were not standing where the whole ledger is visible at once.</p>
+    <p class="lede">We did not discover that information is physical, and we make no claim to have. We took a limit the field already trusts and treated it as a working budget rather than a curiosity at the edge &mdash; then built the defense layer by layer. The pieces were on the table the whole time. The move was to read them together.</p>
+  </div>
+</section>
+
+<!-- ============ DETAILS TIER — ALL THE WAY IN ============ -->
+
+<section class="band">
+  <div class="wrap narrow">
+    <div class="eyebrow"><span class="bar"></span>The details &middot; all the way in</div>
+    <h2 class="sec">The same idea, all the way down.</h2>
+    <p class="lede">What follows is the longer version &mdash; the mechanism rather than the metaphor &mdash; for readers who want it.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <h3 style="font-size:1.4rem;color:var(--white);font-weight:800;">Distinctions, capacity, and cost.</h3>
+    <p class="lede">A distinction is a finite, enforceable separator between possibilities: a boundary the hardware draws and then has to keep drawn. Holding one draws a cost against a finite capacity. Moving between two distinguishable states costs a positive floor that the universe sets and will not discount &mdash; Landauer's <i>k</i><sub>B</sub><i>T</i>&hairsp;ln&hairsp;2 to erase a bit, the Margolus&ndash;Levitin limit on how fast a state can change at a given energy. These are not engineering inefficiencies to be polished away. They are the cheapest the world allows. The budget is the running total of those unavoidable costs against the ceiling, and a quantum processor lives or dies by how close it runs to the line.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="feature">
+      <div>
+        <h3>Degrees of freedom set aside for convenience.</h3>
+        <p>Maxwell's equations can be written in terms of the fields, or in terms of an underlying four-potential. The potential carries more components than the fields strictly need, so the standard formulation fixes a gauge &mdash; it sets some of those components to convenient values and works with the rest. It is an efficient and entirely standard choice. What Aharonov and Bohm showed in 1959 is that the potential is physical all the same: a charged particle picks up a measurable phase traveling through a region where the magnetic field is exactly zero, where only the potential is there to act on it.</p>
+        <p>None of this requires a new electrodynamics, or a claim that the potential is more 'real' than the fields. The point is the plain one Aharonov&ndash;Bohm already settles: a description can carry real, measurable structure in the parts a convenient choice sets aside. The capacity budget is structure of exactly that kind &mdash; present in the physics all along, just not the quantity the standard accounting was built to track.</p>
+      </div>
+      <div class="graphic">
+        <svg class="gfx" viewBox="0 0 230 164" role="img" aria-label="Aharonov-Bohm setup: two electron paths pass either side of a solenoid whose magnetic field is confined inside; the paths acquire a phase difference from the potential even though the field outside is zero">
+          <circle cx="115" cy="75" r="15" fill="rgba(232,93,4,0.14)" stroke="#e85d04" stroke-width="1.6"/>
+          <g fill="#e85d04"><circle cx="109" cy="70" r="1.4"/><circle cx="115" cy="70" r="1.4"/><circle cx="121" cy="70" r="1.4"/><circle cx="109" cy="76" r="1.4"/><circle cx="115" cy="76" r="1.4"/><circle cx="121" cy="76" r="1.4"/><circle cx="112" cy="82" r="1.4"/><circle cx="118" cy="82" r="1.4"/></g>
+          <circle cx="115" cy="75" r="27" fill="none" stroke="rgba(250,163,7,0.4)" stroke-width="1" stroke-dasharray="3 4"/>
+          <path d="M139 64 l4 4 l-6 1.5 z" fill="rgba(250,163,7,0.6)"/>
+          <circle cx="22" cy="75" r="3" fill="#f4e9cd"/>
+          <text x="22" y="95" text-anchor="middle" font-size="7" fill="#cfc6ad">source</text>
+          <path d="M22 75 Q 115 6 208 75" fill="none" stroke="#7fd4c8" stroke-width="2"/>
+          <path d="M22 75 Q 115 144 208 75" fill="none" stroke="#d00000" stroke-width="2"/>
+          <line x1="208" y1="40" x2="208" y2="110" stroke="rgba(244,233,205,0.4)" stroke-width="2.5"/>
+          <text x="208" y="124" text-anchor="middle" font-size="7" fill="#cfc6ad">screen</text>
+          <text x="115" y="19" text-anchor="middle" font-size="7.5" fill="#faa307">B confined inside</text>
+          <text x="151" y="62" font-size="9" font-weight="700" fill="#faa307">A</text>
+          <text x="115" y="140" text-anchor="middle" font-size="7.5" fill="#f4e9cd">B = 0 outside, but A ≠ 0</text>
+          <text x="115" y="157" text-anchor="middle" font-size="6.5" fill="rgba(244,233,205,0.55)">B — magnetic field    ·    A — vector potential</text>
+        </svg>
+      </div>
+    </div>
+    <p class="src" style="max-width:46em;">In the language of the equations: the gradient of the four-potential has sixteen components, the electric and magnetic fields are built from six of them, and a gauge choice sets the rest aside &mdash; a standard, useful simplification, and the kind of place where real structure can go unnoticed.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="feature rev">
+      <div>
+        <h3>The same idea, built into a qubit.</h3>
+        <p>The magnetically-dark qubit (AT-002) works in exactly this regime, on purpose. A coaxial solenoid confines the bias field so that <b>B &asymp; 0 outside</b> while the potential does not vanish &mdash; the Aharonov&ndash;Bohm configuration, used as a design tool. Cancel the field a neighbor can feel; keep the control you need. The deep idea and the shipping hardware are the same idea, one layer apart.</p>
+      </div>
+      <div class="graphic">
+        <svg class="gfx" viewBox="0 0 200 160" role="img" aria-label="The sixteen components of the potential gradient drawn as a four-by-four grid: six are kept as the electric and magnetic fields, ten are set aside by convention">
+          <text x="100" y="16" text-anchor="middle" font-size="8" fill="#cfc6ad">∂<tspan font-size="6">μ</tspan>A<tspan font-size="6">ν</tspan> — 16 components</text>
+          <g>
+            <!-- row/col 4x4, cell 26x26 starting at x=48 y=26 -->
+            <!-- kept = 6 off-diagonal upper -->
+            <g fill="rgba(250,163,7,0.85)" stroke="#180a00" stroke-width="0.5">
+              <rect x="74" y="26" width="24" height="24" rx="2"/><rect x="100" y="26" width="24" height="24" rx="2"/><rect x="126" y="26" width="24" height="24" rx="2"/>
+              <rect x="100" y="52" width="24" height="24" rx="2"/><rect x="126" y="52" width="24" height="24" rx="2"/>
+              <rect x="126" y="78" width="24" height="24" rx="2"/>
+            </g>
+            <!-- deleted = 10 -->
+            <g fill="rgba(244,233,205,0.08)" stroke="rgba(244,233,205,0.2)" stroke-width="0.7">
+              <rect x="48" y="26" width="24" height="24" rx="2"/>
+              <rect x="48" y="52" width="24" height="24" rx="2"/><rect x="74" y="52" width="24" height="24" rx="2"/>
+              <rect x="48" y="78" width="24" height="24" rx="2"/><rect x="74" y="78" width="24" height="24" rx="2"/><rect x="100" y="78" width="24" height="24" rx="2"/>
+              <rect x="48" y="104" width="24" height="24" rx="2"/><rect x="74" y="104" width="24" height="24" rx="2"/><rect x="100" y="104" width="24" height="24" rx="2"/><rect x="126" y="104" width="24" height="24" rx="2"/>
+            </g>
+          </g>
+          <g font-size="7.5">
+            <rect x="40" y="134" width="10" height="10" rx="2" fill="rgba(250,163,7,0.85)"/>
+            <text x="55" y="142" fill="#f4e9cd">6 kept — the fields (E, B)</text>
+            <rect x="40" y="148" width="10" height="10" rx="2" fill="rgba(244,233,205,0.10)" stroke="rgba(244,233,205,0.25)" stroke-width="0.7"/>
+            <text x="55" y="156" fill="rgba(244,233,205,0.55)">10 set aside by convention</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>The mechanisms</div>
+    <h2 class="sec">One budget, five defenses &mdash; how each one works.</h2>
+    <ul class="specs">
+      <li><b>Gate &mdash; make the operation free.</b> <span>The gate angle is fixed by an integer winding number through a non-Abelian (Wilczek&ndash;Zee) holonomy in a zero-energy dark subspace. Control-amplitude error cancels by construction, rather than being calibrated away device by device. <i>(AT-001)</i></span></li>
+      <li><b>Qubit &mdash; isolate the budget.</b> <span>A coaxial solenoid confines the flux bias (B&asymp;0 outside), and a gradiometric layout cancels uniform-field response &mdash; together driving down crosstalk by &ge;300&times; so a qubit barely draws on its neighbors' capacity. <i>(AT-002)</i></span></li>
+      <li><b>Error correction &mdash; manage the spend.</b> <span>Read each interface's saturation headroom &mdash; the budget map, not the raw defect count &mdash; to forecast logical failure before it can span the array, and steer correction toward the interfaces nearest the line. <i>(AT-003)</i></span></li>
+      <li><b>Trust &mdash; measure and certify.</b> <span>Profile hardware on a cost-distortion frontier, run anytime-valid drift monitoring, and audit whether a workload is genuinely beyond a classical machine &mdash; vendor-agnostic, from the data the hardware already produces. <i>(AT-005)</i></span></li>
+      <li><b>Vacuum &mdash; the deepest layer.</b> <span>Engineer the vacuum-energy boundary itself, generating entangled pairs from a controlled boundary &mdash; the same budget idea at the level of the vacuum. Early-stage and exploratory. <i>(AT-004)</i></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <div class="eyebrow"><span class="bar"></span>What we claim &mdash; and what we don't</div>
+    <h2 class="sec">Honest about the stage.</h2>
+    <p class="lede">The principle is grounded in the company's technical papers and the mechanisms are worked out analytically and confirmed in simulation and field solvers. The performance figures are theoretical and validated in those tools &mdash; not yet proven in silicon. The vacuum layer is an open frontier, and we say so.</p>
+    <div class="papercite">
+      <span class="k">Grounded in</span>
+      <i>"Quantum Computing as Enforcement Engineering,"</i> the <i>winding-class holonomic-gate</i> and <i>"Magnetically Dark Winding-Class Quantum Processors"</i> analyses, and <i>"Fault Tolerance as Admissibility Saturation."</i>
+    </div>
+    <div class="statusbar">
+      <span class="chip"><b>Patents pending</b> &middot; five families</span>
+      <span class="chip">Validated in simulation / field solvers</span>
+      <span class="chip">Not yet silicon-proven</span>
+      <span class="chip">Vacuum layer &middot; exploratory</span>
+    </div>
+  </div>
+</section>
+
+<section class="band contact">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center;"><span class="bar"></span>Work with us</div>
+    <h2>One budget. Built into the machine, at every layer.</h2>
+    <div class="turn">See the stack, or come build a layer with us.</div>
+    <a class="mail" href="mailto:ethan@admissibletech.com">ethan@admissibletech.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg><use href="#emblem"/></svg>Admissible Technologies, Inc.</a>
+    <div class="crossnav">
+      <a href="the-stack.html">The protection stack &rarr;</a>
+      <a href="index.html#portfolio">Explore the five branches &rarr;</a>
+      <a href="index.html#principle">Back to the principle</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

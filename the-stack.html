@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Protection Stack — Admissible Technologies</title>
+<meta name="description" content="Five quantum-hardware patent families, one strategy: keep a fragile quantum state intact at every layer where it breaks — the gate, control wiring, error correction, trust, and the vacuum boundary.">
+<link rel="canonical" href="https://admissibletech.com/the-stack.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0a0a0c">
+<meta property="og:site_name" content="Admissible Technologies">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://admissibletech.com/the-stack.html">
+<meta property="og:title" content="The Protection Stack — Admissible Technologies">
+<meta property="og:description" content="Five patent families, one strategy: protect the integrity of a quantum state at every layer where it breaks.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Protection Stack — Admissible Technologies">
+<meta name="twitter:description" content="Five patent families, one strategy: protect the quantum state at every layer where it breaks.">
+<link rel="stylesheet" href="style.css">
+<style>
+  .mapwrap{overflow-x:auto;margin-top:34px;}
+  table.map{width:100%;border-collapse:collapse;min-width:660px;font-size:0.95rem;}
+  table.map th{text-align:left;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);font-weight:700;padding:0 16px 12px;border-bottom:1px solid var(--line);}
+  table.map td{padding:16px;border-bottom:1px solid var(--line);color:var(--cream-dim);vertical-align:top;}
+  table.map td.lyr a{color:var(--amber);font-weight:700;white-space:nowrap;}
+  table.map td.lyr a:hover{color:var(--cream);}
+  table.map td.lyr span{display:block;font-size:0.72rem;color:var(--cream-faint);font-weight:400;letter-spacing:0.06em;margin-top:3px;}
+  table.map td b{color:var(--white);}
+  table.map td.stg{font-size:0.84rem;color:var(--cream-faint);}
+  .fignote{font-size:0.86rem;color:var(--cream-faint);margin-top:14px;max-width:52em;}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="emblem" viewBox="1.8 11.3 64.7 65">
+    <polyline class="e" points="11.29 25.54 11.29 20.98 24.66 20.98 28.19 17.45"/><polyline class="e" points="5.08 47.05 1.83 43.8 11.29 34.35 11.29 29.36"/><polyline class="e" points="16.03 66.63 11.29 66.63 11.29 53.26 7.79 49.76"/><polyline class="e" points="37.43 72.76 34.11 76.08 24.66 66.63 19.78 66.63"/><polyline class="e" points="56.93 62.16 56.93 66.63 43.56 66.63 40.15 70.04"/><polyline class="e" points="63.09 40.51 66.39 43.8 56.93 53.26 56.93 58.09"/><polyline class="e" points="52.32 20.98 56.93 20.98 56.93 34.35 60.39 37.8"/><polyline class="e" points="30.88 14.75 34.11 11.53 43.56 20.98 48.51 20.98"/><line class="e" x1="38.03" y1="34.35" x2="26.98" y2="23.3"/><line class="e" x1="56.93" y1="53.26" x2="47.48" y2="43.81"/><line class="e" x1="30.19" y1="53.26" x2="41.33" y2="64.39"/><line class="e" x1="11.29" y1="34.35" x2="20.74" y2="43.8"/><line class="e" x1="34.11" y1="57.18" x2="24.66" y2="66.63"/><line class="e" x1="54.62" y1="36.67" x2="43.56" y2="47.72"/><line class="e" x1="24.66" y1="39.89" x2="13.6" y2="50.94"/><line class="e" x1="43.56" y1="20.98" x2="34.11" y2="30.43"/><line class="e" x1="30.19" y1="34.35" x2="14.45" y2="34.35"/><line class="e" x1="56.93" y1="34.35" x2="43.56" y2="34.35"/><line class="e" x1="24.66" y1="53.26" x2="11.29" y2="53.26"/><line class="e" x1="53.77" y1="53.26" x2="38.03" y2="53.26"/><line class="e" x1="43.56" y1="53.26" x2="43.56" y2="66.63"/><line class="e" x1="43.56" y1="24.14" x2="43.56" y2="39.89"/><line class="e" x1="24.66" y1="47.72" x2="24.66" y2="63.35"/><line class="e" x1="24.66" y1="20.98" x2="24.66" y2="34.35"/><line class="e" x1="54.62" y1="50.94" x2="56.31" y2="50.94"/><line class="e" x1="26.98" y1="50.94" x2="37.07" y2="50.94"/><line class="e" x1="11.89" y1="50.94" x2="24.66" y2="50.94"/><line class="e" x1="43.56" y1="36.67" x2="56.35" y2="36.67"/><line class="e" x1="16.77" y1="36.67" x2="27.88" y2="36.67"/><line class="e" x1="26.98" y1="34.35" x2="26.98" y2="21.66"/><line class="e" x1="26.98" y1="61.03" x2="26.98" y2="50.05"/><path class="e" d="M15.84,21a29.1,29.1,0,0,1,18.24-6.4h.15"/><path class="e" d="M5.07,40.56a29.09,29.09,0,0,1,8.35-17.4"/><path class="e" d="M11.29,62A29,29,0,0,1,4.9,43.77"/><path class="e" d="M30.79,72.77a29.11,29.11,0,0,1-17.34-8.36"/><path class="e" d="M52.22,66.63A29,29,0,0,1,34.08,73"/><path class="e" d="M63.08,47.11a29.12,29.12,0,0,1-8.54,17.47"/><path class="e" d="M56.93,25.61a29,29,0,0,1,6.33,17.6c0,.18,0,.37,0,.56"/><path class="e" d="M37.34,14.76a29.13,29.13,0,0,1,17.49,8.48"/><path class="d" fill="currentColor" stroke="none" d="M32.87,43.77A1.22,1.22,0,1,1,34.08,45,1.21,1.21,0,0,1,32.87,43.77Z"/>
+  </symbol>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="Admissible Technologies" class="navlogo"></a>
+    <a class="back" href="index.html">&larr; Home</a>
+    <a class="cta" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="phero">
+  <div class="wrap narrow">
+    <div class="layerline">Admissible Technologies &middot; IP portfolio</div>
+    <h1>The protection stack for quantum information.</h1>
+    <div class="tagline">Five patent families, one strategy &mdash; keep a fragile quantum state intact at every layer where it breaks.</div>
+    <p class="intro">A quantum processor fails in five different places: gates drift under control error, neighboring qubits crosstalk, error correction stalls before it scales, results can't be trusted, and the hardware itself degrades at the nanoscale. We hold a filed provisional patent at each. They aren't five unrelated bets &mdash; each protects the same thing, the integrity of a quantum state, at a different point in the machine, from the gate operation down to the vacuum boundary. Two are near-term software that runs on any vendor's hardware; two are the hardware core; one is the frontier.</p>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>At a glance</div>
+    <h2 class="sec">Five families, one strategy.</h2>
+    <p class="lede">Each patent protects the integrity of a quantum state at a different point in the machine. All five are filed provisional applications.</p>
+    <div class="mapwrap">
+      <table class="map">
+        <thead>
+          <tr><th>Layer</th><th>What breaks</th><th>Our IP &mdash; what it does</th><th>Stage</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="lyr"><a href="#gate">Gate</a><span>AT-001</span></td>
+            <td>Control pulses miss; the gate angle drifts.</td>
+            <td><b>Winding-class holonomic gate</b> &mdash; the gate angle is set by an integer winding number, not pulse shape.</td>
+            <td class="stg">Patent pending<br>hardware core</td>
+          </tr>
+          <tr>
+            <td class="lyr"><a href="#control">Control &amp; scaling</a><span>AT-002</span></td>
+            <td>Flux bias crosstalks; calibration grows with the chip.</td>
+            <td><b>VPT solenoid bias</b> &mdash; confines the field; near-diagonal crosstalk, &ge;300&times; lower.</td>
+            <td class="stg">Patent pending<br>hardware core</td>
+          </tr>
+          <tr>
+            <td class="lyr"><a href="#qec">Error correction</a><span>AT-003</span></td>
+            <td>Error correction stalls before it scales.</td>
+            <td><b>The Saturation Monitor</b> &mdash; forecasts logical failure from the budget map and steers correction.</td>
+            <td class="stg">Patent pending<br>near-term software</td>
+          </tr>
+          <tr>
+            <td class="lyr"><a href="#trust">Trust</a><span>AT-005</span></td>
+            <td>You can't verify a result or catch drift.</td>
+            <td><b>Cost-distortion diagnosis</b> &mdash; a four-way verdict and a "hard for a classical machine" certificate.</td>
+            <td class="stg">Patent pending<br>near-term software</td>
+          </tr>
+          <tr>
+            <td class="lyr"><a href="#vacuum">Vacuum</a><span>AT-004</span></td>
+            <td>Nanoscale stiction; no native entanglement source.</td>
+            <td><b>TI&ndash;Casimir boundary</b> &mdash; repulsive-force gap control and a fermionic-DCE entangled-pair source.</td>
+            <td class="stg">Patent pending<br>frontier</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="gate">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>Gate &middot; winding-class holonomic control</div>
+    <h2 class="sec">A gate set by an integer, not a waveform.</h2>
+    <p class="lede">Every quantum gate in service today is a precisely shaped microwave pulse &mdash; and the precision is the problem. Amplitude that's off by a percent, phase that has drifted since the last calibration: each feeds straight through into gate error, which is why so much of running a quantum processor is recalibrating control electronics that won't hold still.</p>
+    <p class="lede">We move the operation out of the pulse and into the circuit. The gate angle is fixed by an integer <i>winding number</i> &mdash; how many times the superconducting phase winds through a physical loop &mdash; carried out as a Wilczek&ndash;Zee holonomy in a zero-energy "dark" subspace. Because the result depends only on that integer, it shrugs off the exact shape and amplitude of the control waveform: a whole class of control error that the pulse-shaped approach has to calibrate away cancels here by construction. An integer is hard to get a little bit wrong.</p>
+    <p class="lede">This is a different robustness axis from chasing ever-higher pulse fidelity &mdash; <i>winding-class robust</i>, not topologically fault-tolerant: the winding still has to be enforced by the control electronics, and adiabaticity and fabrication tolerances still matter. And it runs on clean flux bias, which is exactly what the quiet coil delivers &mdash; so the advantage holds as you pack qubits together instead of drowning in crosstalk.</p>
+    <div class="graphic">
+      <svg class="gfx" viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif,system-ui,Segoe UI,sans-serif" role="img" aria-label="The four-node gate circuit biased by a field-confining coil">
+        <text x="24" y="26" fill="#faa307" font-size="11" font-weight="700" letter-spacing="3">THE GATE &#183; WINDING-CLASS CONTROL</text>
+        <text x="24" y="41" fill="rgba(244,233,205,0.42)" font-size="10">The four-node gate circuit, biased by a field-confining coil.</text>
+        <line x1="298" y1="60" x2="298" y2="330" stroke="rgba(244,233,205,0.12)" stroke-width="1"/>
+        <line x1="152" y1="193" x2="74" y2="112" stroke="rgba(244,233,205,0.55)" stroke-width="1.4"/>
+        <line x1="152" y1="193" x2="230" y2="112" stroke="rgba(244,233,205,0.55)" stroke-width="1.4"/>
+        <line x1="152" y1="193" x2="152" y2="286" stroke="rgba(244,233,205,0.55)" stroke-width="1.4"/>
+        <circle cx="50" cy="150" r="17" fill="none" stroke="#faa307" stroke-width="2"/>
+        <text x="50" y="153" fill="#faa307" font-size="10" font-weight="700" text-anchor="middle">&#934;&#8321;</text>
+        <text x="50" y="180" fill="#faa307" font-size="8.5" text-anchor="middle">&#915;&#8321;</text>
+        <circle cx="254" cy="150" r="17" fill="none" stroke="#7fd4c8" stroke-width="2"/>
+        <text x="254" y="153" fill="#7fd4c8" font-size="10" font-weight="700" text-anchor="middle">&#934;&#8322;</text>
+        <text x="254" y="180" fill="#7fd4c8" font-size="8.5" text-anchor="middle">&#915;&#8322;</text>
+        <g stroke="#f4e9cd" stroke-width="1.8">
+          <line x1="108" y1="147" x2="118" y2="157"/><line x1="108" y1="157" x2="118" y2="147"/>
+          <line x1="186" y1="147" x2="196" y2="157"/><line x1="186" y1="157" x2="196" y2="147"/>
+          <line x1="147" y1="242" x2="157" y2="252"/><line x1="147" y1="252" x2="157" y2="242"/>
+        </g>
+        <text x="92" y="142" fill="rgba(244,233,205,0.6)" font-size="8">J&#8320;&#8337;</text>
+        <text x="200" y="142" fill="rgba(244,233,205,0.6)" font-size="8">J&#8321;&#8337;</text>
+        <text x="162" y="250" fill="rgba(244,233,205,0.6)" font-size="8">J&#8336;&#8337;</text>
+        <rect x="58" y="96" width="32" height="24" rx="4" fill="rgba(244,233,205,0.07)" stroke="rgba(244,233,205,0.5)"/><text x="74" y="112" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">0</text>
+        <rect x="214" y="96" width="32" height="24" rx="4" fill="rgba(244,233,205,0.07)" stroke="rgba(244,233,205,0.5)"/><text x="230" y="112" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">1</text>
+        <rect x="136" y="274" width="32" height="24" rx="4" fill="rgba(244,233,205,0.07)" stroke="rgba(244,233,205,0.5)"/><text x="152" y="290" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">a</text>
+        <rect x="130" y="180" width="44" height="27" rx="5" fill="rgba(250,163,7,0.10)" stroke="#faa307"/><text x="152" y="197" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">e</text>
+        <text x="152" y="222" fill="rgba(244,233,205,0.55)" font-size="7.5" text-anchor="middle">dark subspace (E=0) = logical qubit</text>
+        <text x="152" y="74" fill="#faa307" font-size="9" font-weight="700" text-anchor="middle">winding number &#957; &#8594; gate angle</text>
+        <path d="M271,150 C 300,150 312,168 348,168" fill="none" stroke="rgba(127,212,200,0.5)" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="308" y="142" fill="rgba(244,233,205,0.5)" font-size="7.5" text-anchor="middle">biases the loop</text>
+        <text x="410" y="74" fill="#faa307" font-size="9" font-weight="700" text-anchor="middle">THE QUIET COIL (AT-002)</text>
+        <circle cx="410" cy="172" r="58" fill="none" stroke="rgba(244,233,205,0.18)" stroke-width="1"/>
+        <circle cx="410" cy="172" r="48" fill="none" stroke="rgba(244,233,205,0.30)" stroke-width="1.2"/>
+        <circle cx="410" cy="172" r="28" fill="rgba(127,212,200,0.06)" stroke="#7fd4c8" stroke-width="2.2"/>
+        <g fill="#faa307"><circle cx="458" cy="172" r="3.4"/><circle cx="410" cy="124" r="3.4"/><circle cx="362" cy="172" r="3.4"/><circle cx="410" cy="220" r="3.4"/></g>
+        <text x="410" y="170" fill="#7fd4c8" font-size="9" font-weight="700" text-anchor="middle">&#934;</text>
+        <text x="410" y="182" fill="rgba(127,212,200,0.8)" font-size="7.5" text-anchor="middle">field confined</text>
+        <text x="410" y="100" fill="#f4e9cd" font-size="8.5" text-anchor="middle">B &#8776; 0 outside</text>
+        <circle cx="487" cy="250" r="10" fill="none" stroke="rgba(244,233,205,0.45)" stroke-width="1.2"/><text x="487" y="253" fill="rgba(244,233,205,0.6)" font-size="8" text-anchor="middle">q</text>
+        <line x1="448" y1="206" x2="479" y2="243" stroke="rgba(244,233,205,0.25)" stroke-width="1" stroke-dasharray="2 2"/>
+        <g stroke="#d00000" stroke-width="1.4"><line x1="460" y1="220" x2="468" y2="228"/><line x1="460" y1="228" x2="468" y2="220"/></g>
+        <text x="487" y="274" fill="rgba(244,233,205,0.55)" font-size="7.5" text-anchor="middle">neighbor</text>
+        <text x="487" y="284" fill="rgba(244,233,205,0.55)" font-size="7.5" text-anchor="middle">feels nothing</text>
+        <text x="410" y="318" fill="rgba(244,233,205,0.6)" font-size="8" text-anchor="middle">k_ctrl 0.683 &#183; M_cross &#8804; 25 aH @ 50 &#181;m</text>
+        <text x="24" y="346" fill="rgba(244,233,205,0.62)" font-size="9.5">Gate angle set by an integer winding number, not a shaped pulse &#8212; and the bias field is</text>
+        <text x="24" y="357" fill="rgba(244,233,205,0.62)" font-size="9.5">trapped in the coil, so a neighboring qubit feels nothing.</text>
+      </svg>
+    </div>
+    <p class="src">Provisional filed (App. 64/017,790). Analytically derived and simulation-validated; not yet silicon-proven.</p>
+  </div>
+</section>
+
+<section class="band" id="control">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>Control &amp; scaling &middot; VPT flux bias</div>
+    <h2 class="sec">Flux control that doesn't spread.</h2>
+    <p class="lede">Flux-tunable superconducting chips don't scale cleanly, and the reason is mundane: every flux-bias line is a little antenna that talks to its neighbors. Add qubits and it compounds &mdash; each new bias line can disturb every qubit already on the chip, so the calibration burden grows faster than the chip itself. You end up tuning the whole chip against itself.</p>
+    <p class="lede">Our control wiring confines the field instead of broadcasting it. A coaxial solenoid delivers the flux a qubit needs while a matched return cancels the stray field by geometry &mdash; an exact, first-order cancellation &mdash; so the bias stays local. The crosstalk matrix goes near-diagonal: each qubit feels its own line and almost nothing from anyone else, which turns calibration from a chip-wide fight into N independent jobs you can run in parallel.</p>
+    <p class="lede">Against a conventional bias wire that's a &ge;300&times; reduction in crosstalk, validated in field solvers. It's also a manufacturing non-event &mdash; the solenoid is wound in the standard trilayer process with no extra mask steps. To be precise about scope: this confines uniform, laboratory flux noise; it isn't a fix for surface-spin, dielectric, or quasiparticle noise, and it's validated in simulation, not yet silicon.</p>
+    <div class="graphic">
+      <svg class="gfx" viewBox="0 0 520 292" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif,system-ui,Segoe UI,sans-serif" role="img" aria-label="Qubit-to-qubit crosstalk matrix: conventional bias fills the grid, VPT bias collapses to the diagonal">
+        <text x="24" y="22" fill="#faa307" font-size="11" font-weight="700" letter-spacing="3">CONTROL AT SCALE &#183; VPT FLUX BIAS</text>
+        <text x="24" y="37" fill="rgba(244,233,205,0.42)" font-size="10">Qubit-to-qubit crosstalk: a conventional bias wire vs. confined bias.</text>
+        <rect x="59" y="71" width="111" height="111" fill="none" stroke="rgba(244,233,205,0.12)"/>
+        <rect x="329" y="71" width="111" height="111" fill="none" stroke="rgba(244,233,205,0.12)"/>
+        <g>
+          <rect x="60" y="72" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="82" y="72" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="104" y="72" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/><rect x="126" y="72" width="21" height="21" rx="2" fill="#d00000" opacity="0.14"/><rect x="148" y="72" width="21" height="21" rx="2" fill="#d00000" opacity="0.07"/>
+          <rect x="60" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="82" y="94" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="104" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="126" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/><rect x="148" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.14"/>
+          <rect x="60" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/><rect x="82" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="104" y="116" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="126" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="148" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/>
+          <rect x="60" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.14"/><rect x="82" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/><rect x="104" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="126" y="138" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="148" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/>
+          <rect x="60" y="160" width="21" height="21" rx="2" fill="#d00000" opacity="0.07"/><rect x="82" y="160" width="21" height="21" rx="2" fill="#d00000" opacity="0.14"/><rect x="104" y="160" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/><rect x="126" y="160" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="148" y="160" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/>
+        </g>
+        <g>
+          <rect x="330" y="72" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="352" y="72" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/>
+          <rect x="330" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/><rect x="352" y="94" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="374" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/>
+          <rect x="352" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/><rect x="374" y="116" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="396" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/>
+          <rect x="374" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/><rect x="396" y="138" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="418" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/>
+          <rect x="396" y="160" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/><rect x="418" y="160" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/>
+        </g>
+        <text x="250" y="130" fill="rgba(244,233,205,0.5)" font-size="14" text-anchor="middle">&#8594;</text>
+        <text x="114" y="200" fill="#f4e9cd" font-size="10" font-weight="700" text-anchor="middle">Conventional bias</text>
+        <text x="114" y="213" fill="rgba(244,233,205,0.55)" font-size="8.5" text-anchor="middle">crosstalk spreads &#183; O(N&#178;) calibration</text>
+        <text x="384" y="200" fill="#f4e9cd" font-size="10" font-weight="700" text-anchor="middle">VPT solenoid bias</text>
+        <text x="384" y="213" fill="rgba(244,233,205,0.55)" font-size="8.5" text-anchor="middle">near-diagonal &#183; O(1) parallel calibration</text>
+        <rect x="120" y="230" width="11" height="11" rx="2" fill="#7fd4c8" opacity="0.85"/><text x="136" y="239" fill="rgba(244,233,205,0.7)" font-size="8.5">a qubit's own control</text>
+        <rect x="270" y="230" width="11" height="11" rx="2" fill="#d00000" opacity="0.5"/><text x="286" y="239" fill="rgba(244,233,205,0.7)" font-size="8.5">crosstalk onto neighbors</text>
+        <text x="260" y="262" fill="#faa307" font-size="11" font-weight="700" text-anchor="middle">&#8805;300&#215; lower crosstalk than a conventional bias wire</text>
+        <text x="260" y="277" fill="rgba(244,233,205,0.62)" font-size="9" text-anchor="middle">field confined (B &#8776; 0 outside), wound in the standard process with no extra masks</text>
+      </svg>
+    </div>
+    <p class="src">Provisional filed (App. 64/022,566), eight related inventions. EM/field-solver validated; not yet silicon-proven.</p>
+  </div>
+</section>
+
+<section class="band" id="qec">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>Error correction &middot; the Saturation Monitor</div>
+    <h2 class="sec">Forecast the wall before you scale into it.</h2>
+    <p class="lede">Adding qubits is the industry's answer to almost everything, but it only works if you're truly below the error-correction threshold everywhere on the chip. Real processors aren't uniform &mdash; a few bad couplers or one noisy region pull the effective threshold down, by roughly 25% in our simulations. And what trips a logical qubit isn't the chip's <i>average</i> error rate; it's the weakest path through the code. Hot spots make that path far worse than the average, so a chip can clear the "below threshold" bar on its average while the path that actually decides the outcome is already over the line. Add qubits expecting the exponential payoff, and the logical error rate flattens instead of falling &mdash; qubits spent, no return.</p>
+    <p class="lede">The miss is in what gets measured. A logical failure isn't "a lot of errors" &mdash; it's a connected error chain spanning the code, and average error rates and raw defect counts can't see one forming. We model every interface as a finite budget, capacity against load, and watch the saturation map: where the correction burden is concentrating. That signal flags a forming failure earlier than raw defect count does &mdash; in time to steer correction toward the interfaces nearest the line.</p>
+    <p class="lede">It's vendor-agnostic control-plane software that runs on the syndrome and decoder data a code already produces, on superconducting, ion-trap, or neutral-atom hardware. It doesn't wait on our own chips to ship.</p>
+    <div class="graphic">
+      <svg class="gfx" viewBox="0 0 470 330" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif,system-ui,Segoe UI,sans-serif" role="img" aria-label="Logical error rate vs code distance: the clean curve keeps falling while a real chip plateaus into a wall">
+        <text x="70" y="26" fill="#faa307" font-size="11" font-weight="700" letter-spacing="3">FORECAST THE WALL</text>
+        <text x="70" y="41" fill="rgba(244,233,205,0.42)" font-size="10">More qubits only pay off below threshold &#8212; and real chips aren't uniform.</text>
+        <line x1="70" y1="55" x2="70" y2="255" stroke="rgba(244,233,205,0.40)" stroke-width="1.2"/>
+        <line x1="70" y1="255" x2="440" y2="255" stroke="rgba(244,233,205,0.40)" stroke-width="1.2"/>
+        <text x="64" y="62" fill="rgba(244,233,205,0.55)" font-size="9" text-anchor="end">worse</text>
+        <text x="64" y="252" fill="rgba(244,233,205,0.55)" font-size="9" text-anchor="end">better</text>
+        <text transform="translate(28,205) rotate(-90)" fill="#f4e9cd" font-size="10" text-anchor="middle">logical error rate</text>
+        <text x="255" y="282" fill="#f4e9cd" font-size="10" text-anchor="middle">add more qubits  &#8594;</text>
+        <line x1="205" y1="62" x2="205" y2="255" stroke="#faa307" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+        <text x="205" y="55" fill="#faa307" font-size="9" text-anchor="middle">wall hits ~25% sooner than the average says</text>
+        <path d="M205,158 C 270,164 360,168 420,170 L 420,233 C 360,222 270,196 205,158 Z" fill="rgba(250,163,7,0.10)"/>
+        <path d="M95,82 C 150,120 178,148 205,158 C 280,196 360,222 420,233" fill="none" stroke="#7fd4c8" stroke-width="2.4"/>
+        <path d="M95,82 C 150,120 180,150 205,158 C 270,176 340,168 420,170" fill="none" stroke="#d00000" stroke-width="2.4"/>
+        <circle cx="95" cy="82" r="3" fill="#f4e9cd"/>
+        <text x="232" y="247" fill="#7fd4c8" font-size="10">below threshold &#8212; exponential payoff</text>
+        <text x="246" y="146" fill="#e85d04" font-size="10">real chip &#8212; heterogeneous capacity</text>
+        <circle cx="235" cy="166" r="8" fill="none" stroke="#faa307" stroke-width="1.6"/>
+        <circle cx="235" cy="166" r="3" fill="#faa307"/>
+        <line x1="235" y1="166" x2="250" y2="118" stroke="rgba(250,163,7,0.5)" stroke-width="1"/>
+        <text x="254" y="112" fill="#faa307" font-size="9.5" font-weight="700">Saturation Monitor flags it here</text>
+        <text x="254" y="124" fill="rgba(244,233,205,0.6)" font-size="8.5">&#8212; before the array fails</text>
+        <text x="70" y="312" fill="rgba(244,233,205,0.62)" font-size="9.5">Vendor-agnostic control-plane software &#8212; runs on the syndrome data any code</text>
+        <text x="70" y="323" fill="rgba(244,233,205,0.62)" font-size="9.5">already produces, and steers correction toward the interfaces nearest the line.</text>
+      </svg>
+    </div>
+    <p class="src">Provisional filed (App. 64/070,628). Results are simulation-validated, not yet silicon-proven.</p>
+  </div>
+</section>
+
+<section class="band" id="trust">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>Trust &middot; characterization, monitoring &amp; certification</div>
+    <h2 class="sec">A verdict you can hand a customer.</h2>
+    <p class="lede">The whole point of a quantum computer is that a classical one can't keep up &mdash; which makes it challenging to audit its work. Every answer it returns carries two unanswered questions: is the hardware still behaving the way it should, and did it actually do something a classical machine couldn't? Today both collapse into a single fidelity score &mdash; a headline number that says "good enough" but hides the breakdown: where the errors actually are, whether the device has drifted or hit a limit, and whether the result was beyond classical at all.</p>
+    <p class="lede">We replace the one number with a diagnosis. For every classical explanation of what the device did, we weigh the two prices the diagram plots &mdash; <b>cost</b>, the classical resource it must spend (including the hidden bookkeeping a classical model has to invent), and <b>distortion</b>, the error that explanation has to accept. Where the cheapest classical explanation lands against the budget sorts the device into a four-way verdict: healthy and in spec, near a limit, drifting, or genuinely quantum. That last verdict has a hard backstop &mdash; once a device violates a Bell test, no classical model can match it, and the result can't be argued down.</p>
+    <p class="lede">The output of this assessment is the product: a four-way health read with a live drift monitor, and a signed certificate that a workload was hard for a classical machine. It's vendor-agnostic and runs on the data the hardware already emits.</p>
+    <div class="graphic">
+      <svg class="gfx" viewBox="0 0 470 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif,system-ui,Segoe UI,sans-serif" role="img" aria-label="The trust diagnosis plane: cost versus distortion, sorting a device into a four-way verdict and a certificate">
+        <text x="70" y="26" fill="#faa307" font-size="11" font-weight="700" letter-spacing="3">THE TRUST DIAGNOSIS</text>
+        <text x="70" y="41" fill="rgba(244,233,205,0.42)" font-size="10">The two prices of explaining a device with a classical computer.</text>
+        <line x1="70" y1="55" x2="70" y2="255" stroke="rgba(244,233,205,0.40)" stroke-width="1.2"/>
+        <line x1="70" y1="255" x2="445" y2="255" stroke="rgba(244,233,205,0.40)" stroke-width="1.2"/>
+        <text transform="translate(24,158) rotate(-90)" fill="#f4e9cd" font-size="9.5" text-anchor="middle">cost &#8212; classical resource it must spend  &#8593;</text>
+        <text transform="translate(37,158) rotate(-90)" fill="rgba(244,233,205,0.5)" font-size="8" text-anchor="middle">(incl. hidden bookkeeping)</text>
+        <text x="255" y="284" fill="#f4e9cd" font-size="9.5" text-anchor="middle">distortion &#8212; error a classical explanation must accept  &#8594;</text>
+        <rect x="70" y="140" width="160" height="115" fill="rgba(250,163,7,0.07)"/>
+        <line x1="70" y1="140" x2="445" y2="140" stroke="#faa307" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+        <line x1="230" y1="140" x2="230" y2="255" stroke="#faa307" stroke-width="1" stroke-dasharray="4 3" opacity="0.65"/>
+        <text x="440" y="136" fill="rgba(250,163,7,0.85)" font-size="8.5" text-anchor="end">capacity ceiling</text>
+        <text x="230" y="268" fill="rgba(250,163,7,0.85)" font-size="8.5" text-anchor="middle">tolerance</text>
+        <text x="78" y="250" fill="rgba(250,163,7,0.85)" font-size="9" font-weight="700">trustworthy budget</text>
+        <line x1="300" y1="62" x2="300" y2="255" stroke="#e85d04" stroke-width="1" stroke-dasharray="2 3" opacity="0.75"/>
+        <text x="303" y="72" fill="#e85d04" font-size="8.5">proven-quantum line</text>
+        <circle cx="130" cy="220" r="9" fill="#7fd4c8"/><text x="130" y="220" fill="#0a0a0c" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central">1</text>
+        <text x="143" y="223" fill="#7fd4c8" font-size="10" font-weight="600">Healthy / in spec</text>
+        <circle cx="150" cy="108" r="9" fill="#faa307"/><text x="150" y="108" fill="#0a0a0c" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central">2</text>
+        <text x="163" y="111" fill="#faa307" font-size="10" font-weight="600">Near a limit</text>
+        <circle cx="248" cy="182" r="9" fill="#e85d04"/><text x="248" y="182" fill="#0a0a0c" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central">4</text>
+        <text x="261" y="185" fill="#e85d04" font-size="10" font-weight="600">Drifting</text>
+        <circle cx="365" cy="118" r="11" fill="none" stroke="#f4e9cd" stroke-width="1.4"/>
+        <circle cx="365" cy="118" r="9" fill="#f4e9cd"/><text x="365" y="118" fill="#0a0a0c" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central">3</text>
+        <text x="365" y="102" fill="#f4e9cd" font-size="10" font-weight="700" text-anchor="middle">Genuinely quantum</text>
+        <line x1="365" y1="129" x2="372" y2="200" stroke="rgba(244,233,205,0.35)" stroke-width="1" stroke-dasharray="2 2"/>
+        <rect x="300" y="200" width="152" height="48" rx="8" fill="rgba(244,233,205,0.05)" stroke="rgba(244,233,205,0.5)" stroke-width="1"/>
+        <text x="312" y="217" fill="#7fd4c8" font-size="14" font-weight="700">&#10003;</text>
+        <text x="330" y="216" fill="#faa307" font-size="9" font-weight="700" letter-spacing="1">CERTIFIED</text>
+        <text x="312" y="231" fill="#f4e9cd" font-size="9">hard for a classical machine</text>
+        <path d="M312,240 q7,-5 14,0 t14,0" fill="none" stroke="rgba(244,233,205,0.4)" stroke-width="1"/>
+        <text x="360" y="243" fill="rgba(244,233,205,0.4)" font-size="7">signed</text>
+        <text x="70" y="338" fill="rgba(244,233,205,0.62)" font-size="9.5">Vendor-agnostic &#183; uses the data the hardware already emits &#183; live drift monitoring.</text>
+      </svg>
+    </div>
+    <p class="src">Provisional filed (App. 64/070,738).</p>
+  </div>
+</section>
+
+<section class="band" id="vacuum">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>The vacuum &middot; TI&ndash;Casimir boundary devices</div>
+    <h2 class="sec">The frontier: engineering the vacuum boundary itself.</h2>
+    <p class="lede">The deepest layer of the same idea is the vacuum boundary. A topological-insulator surface carries a protected sea of Dirac electrons; place a switchable magnetic boundary on it and you can shape the quantum vacuum right at that surface. We hold a provisional on two modes of one platform &mdash; and we're candid that this is the exploratory edge of the program.</p>
+    <p class="lede">Driven &mdash; the magnetic boundary oscillated by a piezo &mdash; the surface emits pairs of frequency-entangled electrons: a fermionic dynamical Casimir effect, predicted to run orders of magnitude faster than its photonic cousin, which makes it a candidate on-chip entanglement source. Held static, the same surface produces a repulsive Casimir force: a self-correcting gap that resists nanoscale stiction, useful for keeping MEMS/NEMS structures and processor gaps from collapsing.</p>
+    <p class="lede">The novelty rests on the entangled-pair source, where the prior art is thinnest; the static repulsive effect sits closer to the recent literature. This is option-value IP, not a near-term product &mdash; but it carries the same strategy, protecting the quantum state, all the way down to the vacuum.</p>
+    <div class="graphic">
+      <svg class="gfx" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif,system-ui,Segoe UI,sans-serif" role="img" aria-label="One TI-surface platform run in two modes: static repulsive force, and a dynamic entangled-pair source">
+        <text x="24" y="22" fill="#faa307" font-size="11" font-weight="700" letter-spacing="3">THE VACUUM &#183; TI&#8211;CASIMIR BOUNDARY (FRONTIER)</text>
+        <text x="24" y="37" fill="rgba(244,233,205,0.42)" font-size="10">One platform: a topological-insulator surface with a switchable magnetic boundary.</text>
+        <line x1="260" y1="56" x2="260" y2="250" stroke="rgba(244,233,205,0.12)" stroke-width="1"/>
+        <text x="130" y="74" fill="#faa307" font-size="10" font-weight="700" text-anchor="middle">STATIC MODE</text>
+        <text x="130" y="88" fill="rgba(244,233,205,0.55)" font-size="8.5" text-anchor="middle">repulsive Casimir force</text>
+        <text x="130" y="116" fill="rgba(244,233,205,0.6)" font-size="8" text-anchor="middle">target structure</text>
+        <rect x="65" y="120" width="130" height="14" rx="2" fill="rgba(244,233,205,0.07)" stroke="rgba(244,233,205,0.5)"/>
+        <g stroke="#f4e9cd" stroke-width="1.6">
+          <line x1="130" y1="156" x2="130" y2="143"/><line x1="130" y1="160" x2="130" y2="173"/>
+        </g>
+        <polygon points="127,144 133,144 130,138" fill="#f4e9cd"/>
+        <polygon points="127,172 133,172 130,178" fill="#f4e9cd"/>
+        <text x="150" y="161" fill="rgba(244,233,205,0.7)" font-size="8">push apart</text>
+        <rect x="65" y="176" width="130" height="6" fill="#faa307"/>
+        <rect x="65" y="182" width="130" height="18" rx="2" fill="rgba(127,212,200,0.06)" stroke="#7fd4c8"/>
+        <text x="130" y="214" fill="rgba(244,233,205,0.55)" font-size="8" text-anchor="middle">TI surface + magnetic boundary</text>
+        <text x="130" y="234" fill="rgba(244,233,205,0.5)" font-size="8" text-anchor="middle">self-correcting gap &#183; anti-stiction</text>
+        <text x="130" y="246" fill="rgba(244,233,205,0.4)" font-size="7.5" text-anchor="middle">(supporting branch)</text>
+        <text x="390" y="74" fill="#faa307" font-size="10" font-weight="700" text-anchor="middle">DYNAMIC MODE</text>
+        <text x="390" y="88" fill="rgba(244,233,205,0.55)" font-size="8.5" text-anchor="middle">fermionic dynamical Casimir effect</text>
+        <circle cx="356" cy="118" r="4.5" fill="#7fd4c8"/><circle cx="424" cy="118" r="4.5" fill="#7fd4c8"/>
+        <path d="M356,118 Q390,102 424,118" fill="none" stroke="#7fd4c8" stroke-width="1.1" stroke-dasharray="3 2"/>
+        <text x="390" y="104" fill="#7fd4c8" font-size="8.5" text-anchor="middle">entangled pair</text>
+        <g stroke="rgba(127,212,200,0.7)" stroke-width="1.4">
+          <line x1="378" y1="174" x2="360" y2="130"/><line x1="402" y1="174" x2="420" y2="130"/>
+        </g>
+        <polygon points="357,135 365,132 361,127" fill="#7fd4c8"/>
+        <polygon points="423,135 415,132 419,127" fill="#7fd4c8"/>
+        <path d="M352,166 q8,-5 16,0 t16,0 t16,0 t16,0" fill="none" stroke="#faa307" stroke-width="1.4"/>
+        <text x="390" y="158" fill="rgba(244,233,205,0.6)" font-size="8" text-anchor="middle">oscillating boundary (piezo)</text>
+        <rect x="325" y="176" width="130" height="6" fill="#faa307"/>
+        <rect x="325" y="182" width="130" height="18" rx="2" fill="rgba(127,212,200,0.06)" stroke="#7fd4c8"/>
+        <text x="390" y="214" fill="rgba(244,233,205,0.55)" font-size="8" text-anchor="middle">TI surface + magnetic boundary</text>
+        <text x="390" y="234" fill="rgba(244,233,205,0.5)" font-size="8" text-anchor="middle">on-chip entangled-pair source</text>
+        <text x="390" y="246" fill="#faa307" font-size="7.5" text-anchor="middle">(the novel branch)</text>
+        <text x="260" y="274" fill="#faa307" font-size="10.5" font-weight="700" text-anchor="middle">Entangled pairs from the vacuum &#8212; orders of magnitude above photonic DCE</text>
+        <text x="260" y="288" fill="rgba(244,233,205,0.6)" font-size="9" text-anchor="middle">Early-stage. The frontier of the program.</text>
+      </svg>
+    </div>
+    <p class="src">Provisional filed (App. 64/070,728). Exploratory; physics is analytical, no device built.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <div class="eyebrow"><span class="bar"></span>What we claim &mdash; and what we don't</div>
+    <h2 class="sec">Honest about the stage.</h2>
+    <p class="lede">The strategy is grounded in the company's technical work; the mechanisms are derived analytically and confirmed in simulation and field solvers. The performance figures are theoretical and validated in those tools &mdash; not yet proven in silicon. Two of the five families are near-term software that runs on hardware shipping today; the vacuum layer is an open frontier, and we say so.</p>
+    <div class="statusbar">
+      <span class="chip"><b>Patents pending</b> &middot; five families</span>
+      <span class="chip">Two near-term software</span>
+      <span class="chip">Two hardware core</span>
+      <span class="chip">Validated in simulation / field solvers</span>
+      <span class="chip">Not yet silicon-proven</span>
+      <span class="chip">Vacuum layer &middot; exploratory</span>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center;"><span class="bar"></span>Work with us</div>
+    <h2>One state to protect. Five layers to protect it.</h2>
+    <div class="turn">See the science, or come build a layer with us.</div>
+    <a class="mail" href="mailto:ethan@admissibletech.com">ethan@admissibletech.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg><use href="#emblem"/></svg>Admissible Technologies, Inc.</a>
+    <div class="crossnav">
+      <a href="the-idea.html">Read the idea &rarr;</a>
+      <a href="index.html#portfolio">The five branches &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

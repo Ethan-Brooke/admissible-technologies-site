@@ -28,7 +28,7 @@
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="index.html"><svg><use href="#emblem"/></svg>Admissible Technologies</a>
+    <a class="brand" href="index.html"><img src="logo.svg" alt="Admissible Technologies" class="navlogo"></a>
     <a class="back" href="index.html#portfolio">&larr; Back to the stack</a>
     <a class="cta" href="index.html#contact">Contact</a>
   </div>
@@ -36,19 +36,83 @@
 
 <header class="phero">
   <div class="wrap narrow">
-    <div class="layerline">The gate · topological protection<span class="at">AT-001</span></div>
-    <h1>A gate set by geometry, not by your pulse.</h1>
+    <div class="layerline">The gate · winding-class control<span class="at">AT-001</span></div>
+    <h1>A gate set by geometry, not by the shape of the pulse.</h1>
     <div class="tagline">Winding-class holonomic gates</div>
-    <p class="intro">Every quantum gate is an instruction the control electronics deliver imperfectly — and in a normal gate, an imperfect pulse is a coherent mistake the qubit faithfully executes. The winding-class gate breaks that link: the operation is fixed by an integer, so amplitude error largely cancels by construction.</p>
+    <p class="intro">In a conventional quantum processor, a gate is a waveform. The qubit executes whatever the control electronics deliver &mdash; including the imperfections. A small amplitude error becomes a coherent mistake, and the qubit faithfully carries it forward.</p>
   </div>
 </header>
 
 <section class="band">
+  <div class="wrap narrow">
+    <div class="papercite" style="margin-top:0;">
+      <span class="k">In plain terms</span>
+      AT-001 is a new way to control a qubit in superposition. In a conventional gate, the qubit performs whatever imperfect pulse the control electronics deliver. AT-001 moves the operation out of the pulse and into the circuit geometry: the gate is set by how the superconducting phase winds through the device. Because the result depends on an integer winding number rather than precise pulse amplitude, the operation becomes more stable against control error.
+    </div>
+    <p class="lede">AT-001 breaks that link. The operation is not defined by the exact height or shape of the pulse, but by an integer <i>winding number</i>: how many times the superconducting phase winds through a physical loop. The gate is implemented as a Wilczek&ndash;Zee holonomy in a zero-energy dark subspace, so the result depends on the winding class of the path, not on the fine details of the waveform.</p>
+    <p class="lede">The pulse can flex. The integer cannot. As long as the winding is enforced and the evolution remains adiabatic, a whole class of control-amplitude error cancels by construction. An integer is hard to get a little bit wrong.</p>
+    <p class="lede">This is not a claim of topological fault tolerance. The winding still has to be driven correctly, and adiabaticity, fabrication tolerance, leakage, and disorder still matter. The claim is narrower and more useful for near-term hardware: the gate is <i>winding-class robust</i>. It moves the burden from perfect pulse amplitude to circuit geometry and path class.</p>
+    <p class="lede">It also pairs naturally with AT-002. The gate needs clean flux bias; the quiet coil supplies it. By confining the bias field near the qubit, the coil helps the winding-class advantage survive as qubits are packed closer together instead of being washed out by crosstalk.</p>
+    <div class="graphic" id="fig-hero">
+      <svg class="gfx" viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif,system-ui,Segoe UI,sans-serif" role="img" aria-label="The four-node gate circuit biased by a field-confining coil">
+        <text x="24" y="26" fill="#faa307" font-size="11" font-weight="700" letter-spacing="3">THE GATE &#183; WINDING-CLASS CONTROL</text>
+        <text x="24" y="41" fill="rgba(244,233,205,0.42)" font-size="10">The four-node gate circuit, biased by a field-confining coil.</text>
+        <line x1="298" y1="60" x2="298" y2="330" stroke="rgba(244,233,205,0.12)" stroke-width="1"/>
+        <line x1="152" y1="193" x2="74" y2="112" stroke="rgba(244,233,205,0.55)" stroke-width="1.4"/>
+        <line x1="152" y1="193" x2="230" y2="112" stroke="rgba(244,233,205,0.55)" stroke-width="1.4"/>
+        <line x1="152" y1="193" x2="152" y2="286" stroke="rgba(244,233,205,0.55)" stroke-width="1.4"/>
+        <circle cx="50" cy="150" r="17" fill="none" stroke="#faa307" stroke-width="2"/>
+        <text x="50" y="153" fill="#faa307" font-size="10" font-weight="700" text-anchor="middle">&#934;&#8321;</text>
+        <text x="50" y="180" fill="#faa307" font-size="8.5" text-anchor="middle">&#915;&#8321;</text>
+        <circle cx="254" cy="150" r="17" fill="none" stroke="#7fd4c8" stroke-width="2"/>
+        <text x="254" y="153" fill="#7fd4c8" font-size="10" font-weight="700" text-anchor="middle">&#934;&#8322;</text>
+        <text x="254" y="180" fill="#7fd4c8" font-size="8.5" text-anchor="middle">&#915;&#8322;</text>
+        <g stroke="#f4e9cd" stroke-width="1.8">
+          <line x1="108" y1="147" x2="118" y2="157"/><line x1="108" y1="157" x2="118" y2="147"/>
+          <line x1="186" y1="147" x2="196" y2="157"/><line x1="186" y1="157" x2="196" y2="147"/>
+          <line x1="147" y1="242" x2="157" y2="252"/><line x1="147" y1="252" x2="157" y2="242"/>
+        </g>
+        <text x="92" y="142" fill="rgba(244,233,205,0.6)" font-size="8">J&#8320;&#8337;</text>
+        <text x="200" y="142" fill="rgba(244,233,205,0.6)" font-size="8">J&#8321;&#8337;</text>
+        <text x="162" y="250" fill="rgba(244,233,205,0.6)" font-size="8">J&#8336;&#8337;</text>
+        <rect x="58" y="96" width="32" height="24" rx="4" fill="rgba(244,233,205,0.07)" stroke="rgba(244,233,205,0.5)"/><text x="74" y="112" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">0</text>
+        <rect x="214" y="96" width="32" height="24" rx="4" fill="rgba(244,233,205,0.07)" stroke="rgba(244,233,205,0.5)"/><text x="230" y="112" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">1</text>
+        <rect x="136" y="274" width="32" height="24" rx="4" fill="rgba(244,233,205,0.07)" stroke="rgba(244,233,205,0.5)"/><text x="152" y="290" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">a</text>
+        <rect x="130" y="180" width="44" height="27" rx="5" fill="rgba(250,163,7,0.10)" stroke="#faa307"/><text x="152" y="197" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">e</text>
+        <text x="152" y="222" fill="rgba(244,233,205,0.55)" font-size="7.5" text-anchor="middle">dark subspace (E=0) = logical qubit</text>
+        <text x="152" y="74" fill="#faa307" font-size="9" font-weight="700" text-anchor="middle">winding number &#957; &#8594; gate angle</text>
+        <path d="M271,150 C 300,150 312,168 348,168" fill="none" stroke="rgba(127,212,200,0.5)" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="308" y="142" fill="rgba(244,233,205,0.5)" font-size="7.5" text-anchor="middle">biases the loop</text>
+        <text x="410" y="74" fill="#faa307" font-size="9" font-weight="700" text-anchor="middle">THE QUIET COIL (AT-002)</text>
+        <circle cx="410" cy="172" r="58" fill="none" stroke="rgba(244,233,205,0.18)" stroke-width="1"/>
+        <circle cx="410" cy="172" r="48" fill="none" stroke="rgba(244,233,205,0.30)" stroke-width="1.2"/>
+        <circle cx="410" cy="172" r="28" fill="rgba(127,212,200,0.06)" stroke="#7fd4c8" stroke-width="2.2"/>
+        <g fill="#faa307"><circle cx="458" cy="172" r="3.4"/><circle cx="410" cy="124" r="3.4"/><circle cx="362" cy="172" r="3.4"/><circle cx="410" cy="220" r="3.4"/></g>
+        <text x="410" y="170" fill="#7fd4c8" font-size="9" font-weight="700" text-anchor="middle">&#934;</text>
+        <text x="410" y="182" fill="rgba(127,212,200,0.8)" font-size="7.5" text-anchor="middle">field confined</text>
+        <text x="410" y="100" fill="#f4e9cd" font-size="8.5" text-anchor="middle">B &#8776; 0 outside</text>
+        <circle cx="487" cy="250" r="10" fill="none" stroke="rgba(244,233,205,0.45)" stroke-width="1.2"/><text x="487" y="253" fill="rgba(244,233,205,0.6)" font-size="8" text-anchor="middle">q</text>
+        <line x1="448" y1="206" x2="479" y2="243" stroke="rgba(244,233,205,0.25)" stroke-width="1" stroke-dasharray="2 2"/>
+        <g stroke="#d00000" stroke-width="1.4"><line x1="460" y1="220" x2="468" y2="228"/><line x1="460" y1="228" x2="468" y2="220"/></g>
+        <text x="487" y="274" fill="rgba(244,233,205,0.55)" font-size="7.5" text-anchor="middle">neighbor</text>
+        <text x="487" y="284" fill="rgba(244,233,205,0.55)" font-size="7.5" text-anchor="middle">feels nothing</text>
+        <text x="410" y="318" fill="rgba(244,233,205,0.6)" font-size="8" text-anchor="middle">k_ctrl 0.683 &#183; M_cross &#8804; 25 aH @ 50 &#181;m</text>
+        <text x="24" y="346" fill="rgba(244,233,205,0.62)" font-size="9.5">Gate angle set by an integer winding number, not a shaped pulse &#8212; and the bias field is</text>
+        <text x="24" y="357" fill="rgba(244,233,205,0.62)" font-size="9.5">trapped in the coil, so a neighboring qubit feels nothing.</text>
+      </svg>
+    </div>
+    <p class="src">The logical qubit lives in a pair of zero-energy dark states; the gate angle is set by the integer winding number &nu; as the phase winds through the loop, while the quiet coil (AT-002) supplies the bias and keeps the field local.</p>
+    <p class="src">Provisional filed &mdash; App. 64/017,790. Analytically derived and simulation-validated; not yet silicon-proven.</p>
+  </div>
+</section>
+
+<section class="band">
   <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>Inside the gate</div>
     <div class="feature">
       <div>
-        <h3>The problem: gates inherit every control error.</h3>
-        <p>In a conventional gate, the rotation angle is proportional to the drive amplitude and duration. Get the pulse 1% wrong and the gate is 1% wrong — a coherent error that accumulates across a circuit faster than decoherence does. You can calibrate it away, but only momentarily, and only per device.</p>
+        <h3>The dark subspace</h3>
+        <p>The logical qubit is encoded in two zero-energy dark states, |D&#8321;&rang; and |D&#8322;&rang;. These states are decoupled from the lossy excited level and separated from the bright sector by a dark&ndash;bright gap above ~420&nbsp;MHz. That gap raises the cost of erasure: thermal and TLS processes have to cross it before they can spoil the distinction the qubit is holding open.</p>
       </div>
       <div class="graphic">
         <svg class="gfx" viewBox="0 0 200 132" role="img" aria-label="Holonomic dark-state level diagram: three ground states drive to one excited state, with a zero-energy dark subspace">
@@ -69,15 +133,10 @@
         </svg>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap">
-    <div class="feature rev">
+    <div class="feature rev" style="margin-top:44px;">
       <div>
-        <h3>How it works: a loop in a dark subspace.</h3>
-        <p>The logical qubit lives in a two-state <b>dark subspace</b> — a pair of zero-energy states decoupled from the lossy excited level. Sweeping flux through the circuit's loops steers that subspace around a closed path, and the resulting non-Abelian (Wilczek&ndash;Zee) holonomy depends only on the <b>integer winding number</b> of the path. The gate angle is geometry, not amplitude — and the connection that generates it is constant by gauge invariance, which is why a single Josephson junction per loop is load-bearing.</p>
+        <h3>Winding-class control</h3>
+        <p>A flux sweep with winding number &nu;&nbsp;=&nbsp;1 sets the gate angle, &theta;&nbsp;=&nbsp;2&pi;&nu;&lambda;. The path can deform and the waveform can vary, but if the winding number is unchanged, the gate angle is unchanged to first order. That is the core move: the operation is carried by a winding class, not by pulse amplitude.</p>
       </div>
       <div class="graphic">
         <svg class="gfx" viewBox="0 0 200 150" role="img" aria-label="A closed flux loop traced once (winding number one) yields a fixed gate angle">
@@ -92,28 +151,22 @@
         </svg>
       </div>
     </div>
+    <h3 style="margin-top:44px;font-size:1.3rem;color:var(--white);font-weight:800;">What it buys</h3>
     <ul class="specs">
-      <li><b>Gate angle = integer winding &times; a fixed constant</b> <span>&mdash; first-order immune to control-amplitude error; verified two independent ways to 0.1%.</span></li>
-      <li><b>Universal.</b> <span>A three-handle device gives two independent generators, so finite winding sequences are dense in SU(2) (Solovay&ndash;Kitaev compile).</span></li>
-      <li><b>Gap-protected.</b> <span>A dark&ndash;bright gap above ~420&nbsp;MHz keeps thermal and TLS processes from spoiling the protection.</span></li>
-      <li><b>A different axis than raw fidelity.</b> <span>The win is robustness and array-size independence, not beating the best demonstrated single-gate number.</span></li>
+      <li><b>First-order amplitude-error immunity.</b> <span>The gate angle is an integer winding number times a fixed geometric constant; control-amplitude error largely cancels by construction, verified analytically and numerically by two independent methods to 0.1%.</span></li>
+      <li><b>Universal control.</b> <span>A three-handle device gives two independent generators; finite winding sequences are dense in SU(2), so arbitrary single-qubit rotations compile via Solovay&ndash;Kitaev.</span></li>
+      <li><b>Gap protection.</b> <span>The dark subspace is separated from the bright states by a gap above ~420&nbsp;MHz, reducing the ability of thermal and TLS processes to erase the distinction.</span></li>
+      <li><b>A different robustness axis.</b> <span>Not the best isolated single-gate fidelity number, but a gate less dependent on perfect analog pulse delivery &mdash; and therefore more stable as the processor scales.</span></li>
     </ul>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap narrow">
-    <div class="eyebrow"><span class="bar"></span>The science</div>
-    <h2 class="sec">Proven on paper, validated in simulation.</h2>
-    <p class="lede">The construction, the gauge-invariance proof, and the density-in-SU(2) universality result are worked out analytically and confirmed by multi-mode numerics. It is a design we are looking to prove on a partner's hardware &mdash; not yet a fabricated device.</p>
+    <div class="eyebrow"><span class="bar"></span>Reference</div>
     <div class="papercite">
       <span class="k">Reference</span>
       E. S. Brooke, <i>"Universal Holonomic Quantum Gates via Winding-Class-Indexed Dark-State Connections in Multi-Loop Superconducting Circuits"</i> (2026). Gate = exp(i&middot;2&pi;&nu;&middot;A<sub>&phi;</sub>), set by the integer winding number &nu;.
-    </div>
-    <div class="statusbar">
-      <span class="chip"><b>Patent-pending</b> &middot; provisional filed</span>
-      <span class="chip">Analytically + numerically validated</span>
-      <span class="chip">Not yet silicon-proven</span>
     </div>
   </div>
 </section>

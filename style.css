@@ -20,7 +20,7 @@ a{color:inherit;text-decoration:none;}
 
 /* nav */
 nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(12px);background:rgba(10,10,12,0.7);border-bottom:1px solid var(--line);}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;}
 .brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;font-size:0.82rem;color:var(--cream);}
 .brand svg{width:30px;height:30px;color:var(--cream);fill:none;stroke:currentColor;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;}
 nav .links{display:flex;gap:26px;font-size:0.85rem;color:var(--cream-dim);}
@@ -74,7 +74,7 @@ p.lede{font-size:1.12rem;color:var(--cream-dim);margin-top:18px;max-width:46em;}
 .pcard p{font-size:0.95rem;color:var(--cream-dim);}
 .pcard .status{font-size:0.8rem;color:var(--cream-faint);margin-top:16px;}
 /* the visible "more info" button on each card */
-.pcard .explore{margin-top:18px;display:inline-flex;align-items:center;justify-content:space-between;gap:10px;
+.pcard .explore{margin-top:auto;display:inline-flex;align-items:center;justify-content:space-between;gap:10px;
   background:rgba(250,163,7,0.10);border:1px solid rgba(250,163,7,0.45);border-radius:10px;
   padding:11px 16px;font-weight:700;font-size:0.9rem;color:var(--amber);transition:background .15s;}
 .pcard .explore:hover{background:rgba(250,163,7,0.20);}
@@ -144,3 +144,16 @@ footer .brand svg{width:24px;height:24px;}
 .crossnav{display:flex;justify-content:space-between;gap:14px;margin-top:14px;flex-wrap:wrap;}
 .crossnav a{font-size:0.9rem;color:var(--cream-dim);}
 .crossnav a:hover{color:var(--amber);}
+
+/* principle-section explore button (matches card .explore, used outside .pcard) */
+.idea-explore{display:inline-flex;align-items:center;gap:10px;margin-top:26px;
+  background:rgba(250,163,7,0.10);border:1px solid rgba(250,163,7,0.45);border-radius:10px;
+  padding:13px 20px;font-weight:700;font-size:0.95rem;color:var(--amber);transition:background .15s;}
+.idea-explore:hover{background:rgba(250,163,7,0.20);}
+.idea-explore .arrow{font-size:1.1rem;transition:transform .15s;}
+.idea-explore:hover .arrow{transform:translateX(4px);}
+
+/* ===== typography + figure alignment pass (2026-05-22) ===== */
+p.lede, .phero .intro, .feature p { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+.graphic { max-width: 51.5rem; }  /* match .lede measure (46em x 1.12rem) so figures align with body text */
+.brand img.navlogo{height:clamp(38px,8vw,72px);width:auto;display:block;}

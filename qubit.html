@@ -28,7 +28,7 @@
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="index.html"><svg><use href="#emblem"/></svg>Admissible Technologies</a>
+    <a class="brand" href="index.html"><img src="logo.svg" alt="Admissible Technologies" class="navlogo"></a>
     <a class="back" href="index.html#portfolio">&larr; Back to the stack</a>
     <a class="cta" href="index.html#contact">Contact</a>
   </div>
@@ -39,13 +39,54 @@
     <div class="layerline">The qubit &middot; budget isolation<span class="at">AT-002</span></div>
     <h1>Confine the field. Make the qubit magnetically dark.</h1>
     <div class="tagline">Coaxial-solenoid flux-bias + gradiometric dark qubit</div>
-    <p class="intro">Flux-tunable qubits are controlled by magnetic field &mdash; and conventional bias lines spray that field across the whole chip. Every qubit ends up feeling every bias line and the lab's ambient field. We contain the field at the source and cancel what's left by geometry.</p>
+    <p class="intro">Flux-tunable superconducting chips don't scale cleanly, and the reason is mundane: every flux-bias line is a little antenna that talks to its neighbors. Add qubits and it compounds &mdash; each new bias line can disturb every qubit already on the chip, so the calibration burden grows faster than the chip itself. You end up tuning the whole chip against itself.</p>
   </div>
 </header>
 
 <section class="band">
+  <div class="wrap narrow">
+    <p class="lede">Our control wiring confines the field instead of broadcasting it. A coaxial solenoid delivers the flux a qubit needs while a matched return cancels the stray field by geometry &mdash; an exact, first-order cancellation &mdash; so the bias stays local. The crosstalk matrix goes near-diagonal: each qubit feels its own line and almost nothing from anyone else, which turns calibration from a chip-wide fight into N independent jobs you can run in parallel.</p>
+    <p class="lede">Against a conventional bias wire that's a &ge;300&times; reduction in crosstalk, validated in field solvers. It's also a manufacturing non-event &mdash; the solenoid is wound in the standard trilayer process with no extra mask steps. To be precise about scope: this confines uniform, laboratory flux noise; it isn't a fix for surface-spin, dielectric, or quasiparticle noise, and it's validated in simulation, not yet silicon.</p>
+    <div class="graphic" id="fig-hero">
+      <svg class="gfx" viewBox="0 0 520 292" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif,system-ui,Segoe UI,sans-serif" role="img" aria-label="Qubit-to-qubit crosstalk matrix: conventional bias fills the grid, VPT bias collapses to the diagonal">
+        <text x="24" y="22" fill="#faa307" font-size="11" font-weight="700" letter-spacing="3">CONTROL AT SCALE &#183; VPT FLUX BIAS</text>
+        <text x="24" y="37" fill="rgba(244,233,205,0.42)" font-size="10">Qubit-to-qubit crosstalk: a conventional bias wire vs. confined bias.</text>
+        <rect x="59" y="71" width="111" height="111" fill="none" stroke="rgba(244,233,205,0.12)"/>
+        <rect x="329" y="71" width="111" height="111" fill="none" stroke="rgba(244,233,205,0.12)"/>
+        <g>
+          <rect x="60" y="72" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="82" y="72" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="104" y="72" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/><rect x="126" y="72" width="21" height="21" rx="2" fill="#d00000" opacity="0.14"/><rect x="148" y="72" width="21" height="21" rx="2" fill="#d00000" opacity="0.07"/>
+          <rect x="60" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="82" y="94" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="104" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="126" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/><rect x="148" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.14"/>
+          <rect x="60" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/><rect x="82" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="104" y="116" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="126" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="148" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/>
+          <rect x="60" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.14"/><rect x="82" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/><rect x="104" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="126" y="138" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="148" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/>
+          <rect x="60" y="160" width="21" height="21" rx="2" fill="#d00000" opacity="0.07"/><rect x="82" y="160" width="21" height="21" rx="2" fill="#d00000" opacity="0.14"/><rect x="104" y="160" width="21" height="21" rx="2" fill="#d00000" opacity="0.28"/><rect x="126" y="160" width="21" height="21" rx="2" fill="#d00000" opacity="0.5"/><rect x="148" y="160" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/>
+        </g>
+        <g>
+          <rect x="330" y="72" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="352" y="72" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/>
+          <rect x="330" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/><rect x="352" y="94" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="374" y="94" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/>
+          <rect x="352" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/><rect x="374" y="116" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="396" y="116" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/>
+          <rect x="374" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/><rect x="396" y="138" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/><rect x="418" y="138" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/>
+          <rect x="396" y="160" width="21" height="21" rx="2" fill="#d00000" opacity="0.10"/><rect x="418" y="160" width="21" height="21" rx="2" fill="#7fd4c8" opacity="0.85"/>
+        </g>
+        <text x="250" y="130" fill="rgba(244,233,205,0.5)" font-size="14" text-anchor="middle">&#8594;</text>
+        <text x="114" y="200" fill="#f4e9cd" font-size="10" font-weight="700" text-anchor="middle">Conventional bias</text>
+        <text x="114" y="213" fill="rgba(244,233,205,0.55)" font-size="8.5" text-anchor="middle">crosstalk spreads &#183; O(N&#178;) calibration</text>
+        <text x="384" y="200" fill="#f4e9cd" font-size="10" font-weight="700" text-anchor="middle">VPT solenoid bias</text>
+        <text x="384" y="213" fill="rgba(244,233,205,0.55)" font-size="8.5" text-anchor="middle">near-diagonal &#183; O(1) parallel calibration</text>
+        <rect x="120" y="230" width="11" height="11" rx="2" fill="#7fd4c8" opacity="0.85"/><text x="136" y="239" fill="rgba(244,233,205,0.7)" font-size="8.5">a qubit's own control</text>
+        <rect x="270" y="230" width="11" height="11" rx="2" fill="#d00000" opacity="0.5"/><text x="286" y="239" fill="rgba(244,233,205,0.7)" font-size="8.5">crosstalk onto neighbors</text>
+        <text x="260" y="262" fill="#faa307" font-size="11" font-weight="700" text-anchor="middle">&#8805;300&#215; lower crosstalk than a conventional bias wire</text>
+        <text x="260" y="277" fill="rgba(244,233,205,0.62)" font-size="9" text-anchor="middle">field confined (B &#8776; 0 outside), wound in the standard process with no extra masks</text>
+      </svg>
+    </div>
+    <p class="src">Provisional filed (App. 64/022,566), eight related inventions. EM/field-solver validated; not yet silicon-proven.</p>
+  </div>
+</section>
+
+<section class="band">
   <div class="wrap">
-    <h3 style="font-size:1.5rem;color:var(--white);font-weight:800;">Conventional bias spills. Ours stays put.</h3>
+    <div class="eyebrow"><span class="bar"></span>Inside the qubit</div>
+    <h3 style="font-size:1.5rem;color:var(--white);font-weight:800;margin-top:18px;">Conventional bias spills. Ours stays put.</h3>
+    <p class="lede">The two panels show the same control task done two ways. A conventional flux line broadcasts its field across the chip, so one bias knob nudges many qubits at once. The VPT solenoid traps that field inside itself &mdash; full control authority on its own qubit, almost none on the rest of the array. Confinement is only the first defense; symmetry cancels whatever field is left.</p>
     <div class="compare" style="margin-top:22px;">
       <div class="col bad">
         <h4>Conventional flux line</h4>
