@@ -20,7 +20,7 @@ a{color:inherit;text-decoration:none;}
 
 /* nav */
 nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(12px);background:rgba(10,10,12,0.7);border-bottom:1px solid var(--line);}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
 .brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;font-size:0.82rem;color:var(--cream);}
 .brand svg{width:30px;height:30px;color:var(--cream);fill:none;stroke:currentColor;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;}
 nav .links{display:flex;gap:26px;font-size:0.85rem;color:var(--cream-dim);}
@@ -156,4 +156,4 @@ footer .brand svg{width:24px;height:24px;}
 /* ===== typography + figure alignment pass (2026-05-22) ===== */
 p.lede, .phero .intro, .feature p { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 .graphic { max-width: 51.5rem; }  /* match .lede measure (46em x 1.12rem) so figures align with body text */
-.brand img.navlogo{height:clamp(38px,8vw,72px);width:auto;display:block;}
+.brand img.navlogo{height:clamp(24px,4.5vw,38px);width:auto;display:block;}
