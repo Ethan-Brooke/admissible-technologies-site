@@ -156,9 +156,17 @@ footer .brand svg{width:24px;height:24px;}
 /* ===== typography + figure alignment pass (2026-05-22) ===== */
 p.lede, .phero .intro, .feature p { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 .graphic { max-width: 51.5rem; }  /* match .lede measure (46em x 1.12rem) so figures align with body text */
-.brand img.navlogo{height:clamp(24px,4.5vw,38px);width:auto;display:block;}
+.brand img.navlogo{height:clamp(24px,4.5vw,38px);width:auto;display:block;
 
-/* footer lockup + legal line + closing-band emblem (2026-05-22) */
-footer .brand img.footlogo{height:24px;width:auto;display:block;}
-footer .legal{font-size:0.72rem;color:var(--cream-faint);margin-top:16px;letter-spacing:0.02em;}
-.contact .signmark{height:clamp(70px,11vw,92px);width:auto;display:block;margin:0 auto 30px;}
+/* ===== closing lockup: emblem left, copy right (2026-05-22) ===== */
+.contact.lockup{text-align:left;}
+.contact.lockup .wrap{display:flex;align-items:center;justify-content:flex-start;gap:clamp(28px,5vw,64px);flex-wrap:wrap;}
+.contact.lockup .signmark{height:clamp(180px,27vw,230px);width:auto;margin:0;flex:0 0 auto;}
+.contact.lockup .copy{flex:1 1 340px;min-width:280px;}
+.contact.lockup .copy .eyebrow{justify-content:flex-start;}
+.contact.lockup .copy h2{margin:0;}
+@media(max-width:720px){
+  .contact.lockup .wrap{flex-direction:column;align-items:center;text-align:center;}
+  .contact.lockup .copy{flex-basis:auto;min-width:0;}
+  .contact.lockup .copy .eyebrow{justify-content:center;}
+}
