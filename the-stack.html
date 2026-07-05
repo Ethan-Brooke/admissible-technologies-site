@@ -13,7 +13,7 @@ gtag('config', 'G-64BJ3TZN4G');
 </script>
 
 <title>The Protection Stack — Admissible Technologies</title>
-<meta name="description" content="Five quantum-hardware patent families, one strategy: keep a fragile quantum state intact at every layer where it breaks — the gate, control wiring, error correction, trust, and the vacuum boundary.">
+<meta name="description" content="Nine quantum-hardware patent families, one strategy: keep a fragile quantum state intact at every layer where it breaks — the gate, control wiring, error correction, trust, design, and the vacuum boundary.">
 <link rel="canonical" href="https://admissibletech.com/the-stack.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -24,10 +24,10 @@ gtag('config', 'G-64BJ3TZN4G');
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://admissibletech.com/the-stack.html">
 <meta property="og:title" content="The Protection Stack — Admissible Technologies">
-<meta property="og:description" content="Five patent families, one strategy: protect the integrity of a quantum state at every layer where it breaks.">
+<meta property="og:description" content="Nine patent families, one strategy: protect the integrity of a quantum state at every layer where it breaks.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The Protection Stack — Admissible Technologies">
-<meta name="twitter:description" content="Five patent families, one strategy: protect the quantum state at every layer where it breaks.">
+<meta name="twitter:description" content="Nine patent families, one strategy: protect the quantum state at every layer where it breaks.">
 <link rel="stylesheet" href="style.css">
 <style>
   .mapwrap{overflow-x:auto;margin-top:34px;}
@@ -63,16 +63,16 @@ gtag('config', 'G-64BJ3TZN4G');
   <div class="wrap narrow">
     <div class="layerline">Admissible Technologies &middot; IP portfolio</div>
     <h1>The protection stack for quantum information.</h1>
-    <div class="tagline">Five patent families, one strategy &mdash; keep a fragile quantum state intact at every layer where it breaks.</div>
-    <p class="intro">A quantum processor fails in five different places: gates drift under control error, neighboring qubits crosstalk, error correction stalls before it scales, results can't be trusted, and the hardware itself degrades at the nanoscale. We hold a filed provisional patent at each. They aren't five unrelated bets &mdash; each protects the same thing, the integrity of a quantum state, at a different point in the machine, from the gate operation down to the vacuum boundary. Two are near-term software that runs on any vendor's hardware; two are the hardware core; one is the frontier.</p>
+    <div class="tagline">Nine patent families, one strategy &mdash; keep a fragile quantum state intact at every layer where it breaks.</div>
+    <p class="intro">A quantum processor fails in five different places: gates drift under control error, neighboring qubits crosstalk, error correction stalls before it scales, results can't be trusted, and the hardware itself degrades at the nanoscale. We hold filed provisional patents across all of them &mdash; nine families. Four, filed July 2026, deepen the trust layer and open a new one: design synthesis, where the failure modes get designed out before fabrication and the layout ships with a certificate. They aren't nine unrelated bets &mdash; each protects the same thing, the integrity of a quantum state, at a different point in the machine, from the design file down to the vacuum boundary. Six are software that runs on any vendor's hardware; two are the hardware core; one is the frontier.</p>
   </div>
 </header>
 
 <section class="band">
   <div class="wrap">
     <div class="eyebrow"><span class="bar"></span>At a glance</div>
-    <h2 class="sec">Five families, one strategy.</h2>
-    <p class="lede">Each patent protects the integrity of a quantum state at a different point in the machine. All five are filed provisional applications.</p>
+    <h2 class="sec">Nine families, one strategy.</h2>
+    <p class="lede">Each patent protects the integrity of a quantum state at a different point in the machine. All nine are filed provisional applications.</p>
     <div class="mapwrap">
       <table class="map">
         <thead>
@@ -102,6 +102,30 @@ gtag('config', 'G-64BJ3TZN4G');
             <td>You can't verify a result or catch drift.</td>
             <td><b>Cost-distortion diagnosis</b> &mdash; a four-way verdict and a "hard for a classical machine" certificate.</td>
             <td class="stg">Patent pending<br>near-term software</td>
+          </tr>
+          <tr>
+            <td class="lyr"><a href="#trust-depth">Trust &middot; depth</a><span>AT-006</span></td>
+            <td>Syndrome and diagnostics data never cross-check each other.</td>
+            <td><b>Fused telemetry</b> &mdash; correlates the QEC syndrome stream with echo/OTOC records; one health map, one measurement budget.</td>
+            <td class="stg">Patent pending<br>near-term software</td>
+          </tr>
+          <tr>
+            <td class="lyr"><a href="#trust-depth">Trust &middot; depth</a><span>AT-007</span></td>
+            <td>Crosstalk alarms only fire once channels are already entangled.</td>
+            <td><b>Rung certification</b> &mdash; classifies the <i>kind</i> of correlation on a channel; the discord rung is the early warning.</td>
+            <td class="stg">Patent pending<br>near-term software</td>
+          </tr>
+          <tr>
+            <td class="lyr"><a href="#trust-depth">Trust &middot; depth</a><span>AT-008</span></td>
+            <td>Decoherence attribution is multi-parameter model fitting.</td>
+            <td><b>Knee-ratio fingerprinting</b> &mdash; channel identity from integer knee ratios; zero fitted parameters.</td>
+            <td class="stg">Patent pending<br>near-term software</td>
+          </tr>
+          <tr>
+            <td class="lyr"><a href="#design">Design</a><span>AT-009</span></td>
+            <td>Layouts ship on empirical margins; first-pass yield is a gamble.</td>
+            <td><b>Threshold-constrained synthesis</b> &mdash; closed-form limits in the layout loop; every channel ships with a certificate.</td>
+            <td class="stg">Patent pending<br>design software</td>
           </tr>
           <tr>
             <td class="lyr"><a href="#vacuum">Vacuum</a><span>AT-004</span></td>
@@ -301,6 +325,87 @@ gtag('config', 'G-64BJ3TZN4G');
   </div>
 </section>
 
+<section class="band" id="trust-depth">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>Trust &middot; three families deeper</div>
+    <h2 class="sec">The trust layer, four families deep.</h2>
+    <p class="lede">The verdict above is only as good as the diagnostics underneath it &mdash; so in July 2026 we filed the diagnostics too. Three families take the trust layer from a report format to a protected measurement methodology: what the streams say when you read them together, what kind of correlation a channel is carrying, and which physical mechanism is eating the budget.</p>
+    <div class="cards">
+      <article class="pcard">
+        <div class="layer">Fused telemetry <span class="at">AT-006</span></div>
+        <h3>Two streams, one truth.</h3>
+        <div class="tag">Syndrome &times; echo diagnostics</div>
+        <p>A device's error-correction syndrome stream and its echo/OTOC experiment records each tell half the story. We correlate them: a suspected bottleneck is confirmed or demoted by whether the other stream independently sees it, echo baselines taken during a drift episode are quarantined, and one scheduler splits the measurement budget between correction and diagnostics.</p>
+        <p class="status">Provisional filed 2026-07-04 (App. 64/105,107).</p>
+      </article>
+      <article class="pcard">
+        <div class="layer">Rung certification <span class="at">AT-007</span></div>
+        <h3>Certify the kind of correlation.</h3>
+        <div class="tag">The discord rung is the early warning</div>
+        <p>Correlations come in kinds, and the kinds form a strict ladder &mdash; product, classical, discord, entangled, steerable. Existing monitors fire one alarm at the entanglement boundary. We track each parasitic channel's rung over time and respond to each boundary crossing differently &mdash; a channel climbing toward entangling crosstalk gets flagged while it is still separable. The certification product: every spectator channel at or below a contracted rung.</p>
+        <p class="status">Provisional filed 2026-07-04 (App. 64/105,101).</p>
+      </article>
+      <article class="pcard">
+        <div class="layer">Channel fingerprinting <span class="at">AT-008</span></div>
+        <h3>Attribution with zero fitted parameters.</h3>
+        <div class="tag">Integer knee ratios, nothing tuned</div>
+        <p>Decoherence budgets are attributed today by fitting multi-parameter noise models. We match the temperature knees of a device's loss, noise, and coherence channels to a ladder of small integers &mdash; only Planck's and Boltzmann's constants enter &mdash; and the ratios identify which physical channel dominates. Then the answer sets the operating point, or screens the wafer.</p>
+        <p class="status">Provisional filed 2026-07-04 (App. 64/105,099).</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="design">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>Design &middot; threshold-constrained synthesis</div>
+    <h2 class="sec">Sign off the chip before it exists.</h2>
+    <p class="lede">Everything above measures a machine that has already been built. The newest layer moves the same physics to the other side of fabrication. Quantum chip layout today is constrained by empirical tolerance windows and tunable cost-function weights &mdash; margins chosen from experience, checked by characterize-and-iterate after the fact. The result is exactly what you'd expect: first-pass yield is a gamble, and every fabrication run is part of the design loop.</p>
+    <p class="lede">We synthesize the layout under derived limits instead. Pairwise coupling between placed elements is computed from a physical field-overlap objective; placement, routing, winding topology, and frequency allocation are then adjusted until every parasitic channel sits below a closed-form threshold from our cost model, and every operating frequency clears the integer threshold rule that AT-008 uses for attribution. The layout that comes out carries a per-channel certificate &mdash; channel, threshold, computed value, margin &mdash; and goes to the mask file certified.</p>
+    <p class="lede">The field is converging on this idea &mdash; the mid-2026 "fabless quantum" roadmap proposes physics-derived design signoff as a concept. We filed with the closed-form thresholds and the working constraint loop. And the layer composes with the rest of the stack: AT-008's attribution picks each channel's threshold, and the certificate primes AT-007's monitoring baseline the day the chip comes back.</p>
+    <div class="graphic">
+      <svg class="gfx" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif,system-ui,Segoe UI,sans-serif" role="img" aria-label="Layout synthesis loop: candidate layout checked against derived thresholds, emitting a certified mask file">
+        <text x="24" y="22" fill="#faa307" font-size="11" font-weight="700" letter-spacing="3">DESIGN &#183; THRESHOLD-CONSTRAINED SYNTHESIS</text>
+        <text x="24" y="37" fill="rgba(244,233,205,0.42)" font-size="10">Every parasitic channel checked against a derived limit &#8212; before fabrication.</text>
+        <rect x="34" y="70" width="150" height="150" rx="8" fill="rgba(244,233,205,0.04)" stroke="rgba(244,233,205,0.35)"/>
+        <text x="109" y="62" fill="#f4e9cd" font-size="9.5" font-weight="700" text-anchor="middle">candidate layout</text>
+        <g fill="none" stroke="#7fd4c8" stroke-width="1.6">
+          <circle cx="70" cy="106" r="10"/><circle cx="148" cy="106" r="10"/><circle cx="70" cy="184" r="10"/><circle cx="148" cy="184" r="10"/>
+        </g>
+        <line x1="80" y1="106" x2="138" y2="106" stroke="rgba(127,212,200,0.6)" stroke-width="1.2"/>
+        <line x1="70" y1="116" x2="70" y2="174" stroke="rgba(127,212,200,0.6)" stroke-width="1.2"/>
+        <line x1="148" y1="116" x2="148" y2="174" stroke="rgba(127,212,200,0.6)" stroke-width="1.2"/>
+        <line x1="80" y1="176" x2="138" y2="114" stroke="#d00000" stroke-width="1.4" stroke-dasharray="4 3"/>
+        <text x="109" y="152" fill="#d00000" font-size="8" text-anchor="middle">parasitic channel</text>
+        <text x="109" y="236" fill="rgba(244,233,205,0.55)" font-size="8" text-anchor="middle">placement &#183; routing &#183; winding &#183; frequency</text>
+        <text x="212" y="146" fill="rgba(244,233,205,0.5)" font-size="14" text-anchor="middle">&#8594;</text>
+        <rect x="238" y="88" width="120" height="118" rx="8" fill="rgba(250,163,7,0.06)" stroke="#faa307"/>
+        <text x="298" y="80" fill="#faa307" font-size="9.5" font-weight="700" text-anchor="middle">derived limits</text>
+        <text x="298" y="122" fill="#f4e9cd" font-size="9" text-anchor="middle">coupling below the</text>
+        <text x="298" y="134" fill="#f4e9cd" font-size="9" text-anchor="middle">entanglement threshold</text>
+        <line x1="256" y1="148" x2="340" y2="148" stroke="rgba(244,233,205,0.2)"/>
+        <text x="298" y="168" fill="#f4e9cd" font-size="9" text-anchor="middle">frequency above the</text>
+        <text x="298" y="180" fill="#f4e9cd" font-size="9" text-anchor="middle">integer threshold rule</text>
+        <text x="298" y="222" fill="rgba(244,233,205,0.5)" font-size="8" text-anchor="middle">closed form &#8212; no tuned margins</text>
+        <text x="384" y="146" fill="rgba(244,233,205,0.5)" font-size="14" text-anchor="middle">&#8594;</text>
+        <rect x="408" y="96" width="96" height="102" rx="8" fill="rgba(244,233,205,0.05)" stroke="rgba(244,233,205,0.5)"/>
+        <text x="456" y="88" fill="#f4e9cd" font-size="9.5" font-weight="700" text-anchor="middle">certified mask</text>
+        <text x="420" y="120" fill="#7fd4c8" font-size="11" font-weight="700">&#10003;</text>
+        <text x="434" y="120" fill="rgba(244,233,205,0.75)" font-size="8">ch 1 &#183; margin</text>
+        <text x="420" y="138" fill="#7fd4c8" font-size="11" font-weight="700">&#10003;</text>
+        <text x="434" y="138" fill="rgba(244,233,205,0.75)" font-size="8">ch 2 &#183; margin</text>
+        <text x="420" y="156" fill="#7fd4c8" font-size="11" font-weight="700">&#10003;</text>
+        <text x="434" y="156" fill="rgba(244,233,205,0.75)" font-size="8">ch 3 &#183; margin</text>
+        <text x="456" y="184" fill="rgba(244,233,205,0.5)" font-size="8" text-anchor="middle">&#8594; GDSII</text>
+        <path d="M298,206 L298,258 L109,258 L109,224" fill="none" stroke="rgba(250,163,7,0.45)" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="204" y="252" fill="rgba(250,163,7,0.8)" font-size="8" text-anchor="middle">fails a limit &#8594; re-place, re-route, re-tune</text>
+        <text x="24" y="284" fill="rgba(244,233,205,0.62)" font-size="9.5">The certificate primes AT-007's monitoring baseline; AT-008's attribution selects each channel's threshold.</text>
+      </svg>
+    </div>
+    <p class="src">Provisional filed (App. 64/105,110), 2026-07-04. Synthesis flow specified with closed-form constraints; not yet exercised on a fabricated device.</p>
+  </div>
+</section>
+
 <section class="band" id="vacuum">
   <div class="wrap">
     <div class="eyebrow"><span class="bar"></span>The vacuum &middot; TI&ndash;Casimir boundary devices</div>
@@ -357,10 +462,10 @@ gtag('config', 'G-64BJ3TZN4G');
   <div class="wrap narrow">
     <div class="eyebrow"><span class="bar"></span>What we claim &mdash; and what we don't</div>
     <h2 class="sec">Honest about the stage.</h2>
-    <p class="lede">The strategy is grounded in the company's technical work; the mechanisms are derived analytically and confirmed in simulation and field solvers. The performance figures are theoretical and validated in those tools &mdash; not yet proven in silicon. Two of the five families are near-term software that runs on hardware shipping today; the vacuum layer is an open frontier, and we say so.</p>
+    <p class="lede">The strategy is grounded in the company's technical work; the mechanisms are derived analytically and confirmed in simulation and field solvers. The performance figures are theoretical and validated in those tools &mdash; not yet proven in silicon. Six of the nine families are software that runs on hardware shipping today or on design files before fabrication; the vacuum layer is an open frontier, and we say so.</p>
     <div class="statusbar">
-      <span class="chip"><b>Patents pending</b> &middot; five families</span>
-      <span class="chip">Two near-term software</span>
+      <span class="chip"><b>Patents pending</b> &middot; nine families</span>
+      <span class="chip">Six software &middot; observability + design</span>
       <span class="chip">Two hardware core</span>
       <span class="chip">Validated in simulation / field solvers</span>
       <span class="chip">Not yet silicon-proven</span>
@@ -374,7 +479,7 @@ gtag('config', 'G-64BJ3TZN4G');
     <img src="emblem.svg" alt="" class="signmark">
     <div class="copy">
       <div class="eyebrow"><span class="bar"></span>Work with us</div>
-      <h2>One state to protect. Five layers to protect it.</h2>
+      <h2>One state to protect. Six layers to protect it.</h2>
       <div class="turn">See the science, or come build a layer with us.</div>
       <a class="mail" href="mailto:ethan@admissibletech.com">ethan@admissibletech.com</a>
     </div>
@@ -386,7 +491,7 @@ gtag('config', 'G-64BJ3TZN4G');
     <a class="brand" href="index.html"><img src="logo.svg" alt="Admissible Technologies" class="footlogo"></a>
     <div class="crossnav">
       <a href="the-idea.html">Read the idea &rarr;</a>
-      <a href="index.html#portfolio">The five branches &rarr;</a>
+      <a href="index.html#portfolio">The six branches &rarr;</a>
     </div>
   </div>
   <div class="wrap"><p class="legal">&copy; 2026 Admissible Technologies, Inc.</p></div>
